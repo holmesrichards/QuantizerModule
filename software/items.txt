@@ -1,0 +1,2 @@
+scl/~equal_temperament.scl
+scl/pyth_12.scl

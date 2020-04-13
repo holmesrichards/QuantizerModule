@@ -1,0 +1,14 @@
+fp-info-cache
+*bak
+*cache*
+Narrow
+sym-lib-table
+*~
+fp-lib-table
+*.bck
+*.dcm
+*.zip
+*.DS_Store
+*~
+.gitignore-extra
+scl

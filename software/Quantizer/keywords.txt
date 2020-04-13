@@ -1,0 +1,6 @@
+QuantizeResponse     KEYWORD1
+Quantizer            KEYWORD1
+Quantize             KEYWORD2
+SetScale             KEYWORD2
+GetValueForNote      KEYWORD2
+GetFrequencyForNote  KEYWORD2
