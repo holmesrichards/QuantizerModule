@@ -1,6 +1,6 @@
-Quantizer library code is based on code from https://github.com/bpcmusic/telex which is covered by MIT License.
+Quantizer library code is based on code from https://github.com/bpcmusic/telex which is covered by MIT License. table_builder.py is based on code from https://github.com/bpcmusic/telex_scales for which no licensing is evident.
 
-For contents of this repository not subject to the above license, the following applies.
+For contents of this repository not subject to licenses on the above, the following applies.
 
 Creative Commons Legal Code
 
