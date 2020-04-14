@@ -25,59 +25,69 @@ Analog:
 
 ## Scales under consideration
 
-- 12-equal
-  - Pentatonic (5)
-    - Major (CDEGA)
-    - Egyptian (CDFGBb)
-    - Blues minor (CEbFAbBb)
-    - Blues major (CDFGA)
-    - Minor (CEbFGBb)
-  - Diatonic (7)
-    - Ionian
+- Bank 1 [0 array index]: Top twelve (all based on 12-equal)
+  1. Chromatic
+  2. Major C D E F G A B 
+  3. Natural minor C D Eb F G Ab Bb 
+  4. Harmonic minor C D Eb F G Ab B 
+  5. Major pentatonic C D E G A
+  6. Minor pentatonic C Eb F G Bb
+  7. Hexatonic blues C Eb F F# G Bb 
+  8. Whole tone C D E F# G# A#
+  9. Major triad C E G
+  10. Minor triad C Eb G
+  11. Dominant seventh C E G Bb
+  12. Diminished seventh C Eb Gb A
+
+- Bank 2: Modes (all based on 12-equal)
+  - Pentatonic
+    1. Major (CDEGA)
+    2. Egyptian (CDFGBb)
+    3. Blues minor (CEbFAbBb)
+    4. Blues major (CDFGA)
+    5. Minor (CEbFGBb)
+  - Diatonic
+    6. Ionian
     - Dorian
     - Phrygian
     - Lydian
     - Mixolydian
     - Aolian
     - Locrian
-  - Chromatic (1)
-- Just (7)
-  - Ionian
-  - Dorian
-  - Phrygian
-  - Lydian
-  - Mixolydian
-  - Aolian
-  - Locrian
-- Pythagorean (4)
-  - 5 note major
-  - 5 note minor
-  - 7 note major
-  - 7 note minor
-  - 12 note
-  - 17 note
-- Quarter comma (5)
-  - 5 note major
-  - 5 note minor
-  - 7 note major
-  - 7 note minor
-  - 12 note
-  - 19 note
-  - 31 note
-- Third comma (4)
-  - 5 note major
-  - 5 note minor
-  - 7 note major
-  - 7 note minor
-  - 12 note
-  - 19 note
-- 2/7 comma (4)
-  - 5 note major
-  - 5 note minor
-  - 7 note major
-  - 7 note minor
-  - 12 note
-  - 19 note
+	
+- Bank 3: Just intonation/Pythagorean
+  - Just intonation
+    1. Ptolemy's Intense Diatonic Syntonon, also Zarlino's scale (scl/ptolemy.scl)
+    2. Ellis's Duodene : genus [33355] (scl/duodene.scl)
+    3. 5-limit diamond 1/1 6/5 5/4 4/3 3/2 8/5 5/3
+    4. 7-limit diamond 1/1 8/7 7/6 6/5 5/4 4/3 7/5 10/7 3/2 8/5 5/3 12/7 7/4
+    5. Harry Partch's 43-tone pure scale (scl/partch_43.scl)
+    6. reserved
+    6. reserved
+    6. reserved
+  - Pythagorean all g 3/2 p 2/1
+    9. 5 note 
+    - 7 note 
+    - 12 note
+    - 17 note
+
+- Bank 4: Meantone
+  - Quarter comma all g 3/2-.25 comma
+    1. 5 note
+    - 7 note
+    - 12 note
+    - 19 note
+    - 31 note
+  - Third comma all g 3/2-.33 comma
+    1. 5 note
+    - 7 note
+    - 12 note
+    - 19 note
+  - 2/7 comma all g 3/2-.28 comma
+     1. 5 note
+     - 7 note
+     - 12 note
+	
 - Equal divisions
   - First set
     - 1 note (octaves)
