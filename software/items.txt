@@ -1,2 +1,2 @@
-scl/~equal_temperament.scl
++e 12
 scl/pyth_12.scl

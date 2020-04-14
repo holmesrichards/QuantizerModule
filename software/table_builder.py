@@ -1,31 +1,42 @@
 #!/usr/bin/python
 
-# * Quantizer
-# * Rich Holmes
-# * 
-# * Based on:
-# * table_builder.py from https://github.com/bpcmusic/telex_scales
+# Quantizer
+# Rich Holmes
+# 
+# Based on:
+# table_builder.py from https://github.com/bpcmusic/telex_scales
 #
-# * Removed frequency table, added PROGMEM to declarations
+# Removed frequency table, added PROGMEM to declarations
 #
-# * Added capability to read files with format similar to Scala, but instead
-# * of scale data:
+# Added capability to generate scales as well as reading them
+# Input file lines can be:
+# <path to scl file> [#description]
+# or
+# +g <n> <generator> [<period>] [#description]
+# or
+# +e <n> [list of numbers] [#description]
+# or
+# +q <n> <period> [list of numbers] [#description]
 #
-# * g <number>
-# * p <number>
+# Description if present in the first of these overrides the description in the file.
 #
-# which means to generate a scale with the given number of notes using
-# g and period p. E.g.:
+# Second of these means to generate a scale with n notes using
+# generator and period. E.g.:
 #
-# ! pyth_12_gp.scl
-# !
-# 12-tone Pythagorean scale                                                     
-# 12
-# !
-# g 3/2
-# p 2/1
+# +g 12 3/2 2/1
 #
-# If the p line is missing, 2/1 is assumed.
+# for a 12-tone Pythagorean scale. If the period is omitted, 2/1 is the default.
+#
+# Third means to generate a scale using the listed entries (indexed from 0) from
+# an n-equal division of the octave. 0 is always assumed. E.g.:
+#
+# +e 12 2 4 5 7 9 11
+#
+# for a 12-equal major scale. If the list is omitted, the scale contains all
+# n notes.
+#
+# +q is the same as +e except a period to be equally divided is given. E.g.,
+# +q 13 3/1 for Bohlen-Pierce equal temperament.
 
 import sys, getopt, math
 
@@ -34,66 +45,91 @@ DAC1   = 4095   # DAC counts corresponding to defined voltage
 V1     = 5.0    # voltage corresponding to DAC1
 DACPEROCTAVE  = (DAC1/V1)  # DAC counts per octave
 
-def readFile(inputfile, scalenum, outputhandle, notecounter):
-    description = ""
-    values = 0
-    scale = []
-
 import sys, getopt, math
-def readFile(inputfile, scalenum, outputhandle, notecounter):
+
+def realOrRat (item):
+    if "/" in item:
+        ratio = item.split("/")
+	value = float(ratio[0]) / float(ratio[1])
+	value = math.log(value) * 1200 / math.log(2)
+    else:
+        value = float(item)
+    return value
+
+def onescale(item, scalenum, outputhandle, notecounter):
     description = ""
     values = 0
     scale = []
     generator = 0.0
-    period = 2.0
+    period = 1200.0
+
+    if "#" in item:
+        items = item.split ("#")
+        description = items[1]
+        item = items[0]
     
-    with open(inputfile) as f:
-        for line in f:
-	    line = line.strip()
-
-	    # if it is a comment - skip it
-	    if line.startswith("!"):
-		continue
-
-	    if description == "":
-		description = line
-	    elif values == 0:
-                values = int(line)
-            else:
-                if line.startswith("g"):
-                    line = line[1:]
-                    if "/" in line:
-		        ratio = line.split("/")
-		        generator = float(ratio[0]) / float(ratio[1])
-		        generator = math.log(generator) * 1200 / math.log(2)
-                    else:
-                        generator = float(line)
-                elif line.startswith("p"):
-                    line = line[1:]
-                    if "/" in line:
-		        ratio = line.split("/")
-		        period = float(ratio[0]) / float(ratio[1])
-		        period = math.log(period) * 1200 / math.log(2)
-                    else:
-                        period = float(line)
-	        elif "/" in line:
-		    ratio = line.split("/")
-		    value = float(ratio[0]) / float(ratio[1])
-		    value = math.log(value) * 1200 / math.log(2)
-		    scale.append(value)
-	        else:
-		    scale.append(float(line))
-
-    if not (generator == 0):
+    if item.startswith ("+g"):
+        items = item.split (" ")
+        n = int(items[1])
+        generator = realOrRat(items[2])
+        if len(items) > 3:
+            period = realOrRat(items[3])
+        else:
+            period = 1200.0
         value = generator
         scale = [1200.0]
-        while len(scale) < values:
+        while len(scale) < n:
             while value > period:
                 value -= period
             scale.append (value)
             value += generator
         scale.sort()
+    elif item.startswith ("+e") or item.startswith ("+q"):
+        items = item.split ()
+        n = int(items[1])
+        if items[0].startswith ("+e"):
+            period = 1200.0
+            print items
+            if len(items) > 2:
+                elist = [int(i) for i in items[2:]]
+            else:
+                elist = range(0,n)
+        else:
+            period = realOrRat(items[2])
+            if len(items) > 3:
+                elist = [int(i) for i in items[3:]]
+            else:
+                elist = range(0,n)
+
         
+        cscale = [period/n*i for i in range (0, n)]
+
+        scale = []
+        for e in elist:
+            if not (cscale[e] == 0):
+                scale.append (cscale[e])
+        scale.append (period) 
+    else:
+        with open(item) as f:
+            for line in f:
+                line = line.strip()
+
+                # if it is a comment - skip it
+                if line.startswith("!"):
+                    continue
+
+                if description == "":
+                    description = line
+                elif values == 0:
+                    values = int(line)
+                elif "/" in line:
+                    ratio = line.split("/")
+                    value = float(ratio[0]) / float(ratio[1])
+                    value = math.log(value) * 1200 / math.log(2)
+                    scale.append(value)
+                else:
+                    scale.append(float(line))
+
     table = []
 
     # assume that 0v is C0 and loop over the scale until we have exceeded DACTOP
@@ -130,7 +166,7 @@ def readFile(inputfile, scalenum, outputhandle, notecounter):
     table = ','.join(map(str, table)) 
     hints = ','.join(map(str, hints)) 
 
-    outputhandle.write("// " + inputfile + "\n")
+    outputhandle.write("// " + item + "\n")
     outputhandle.write("// " + description + "\n")
     outputhandle.write("const float Quantizer::scale" + str(scalenum) + "[] = { " + table + " };" + "\n")
     outputhandle.write("const int Quantizer::hints" + str(scalenum) + "[] = { " + hints + " };" + "\n")
@@ -165,7 +201,7 @@ with open("scales.cpp", "w") as outputfile:
     with open(inputfile) as list:
 	for item in list:
 	    item = item.strip()
-	    readFile(item, i, outputfile, notecounter)
+	    onescale(item, i, outputfile, notecounter)
 	    scales.append('scale' + str(i))
 	    hints.append('hints' + str(i))
 	    i += 1
