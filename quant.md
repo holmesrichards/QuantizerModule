@@ -23,9 +23,9 @@ Analog:
 - CV Out:         Quantized CV
 
 
-## Scales under consideration
+## Banks and scales (as provided, but can be reprogrammed)
 
-- Bank 1 [0 array index]: Top twelve (all based on 12-equal)
+- Bank 1 [0 array index]: Top twelve. (Note a few of these duplicate later entries. However only the index is duplicated; the scales themselves are stored only once.)
   1. Chromatic
   2. Major C D E F G A B 
   3. Natural minor C D Eb F G Ab Bb 
@@ -39,23 +39,7 @@ Analog:
   11. Dominant seventh C E G Bb
   12. Diminished seventh C Eb Gb A
 
-- Bank 2: Modes (all based on 12-equal)
-  - Pentatonic
-    1. Major (CDEGA)
-    2. Egyptian (CDFGBb)
-    3. Blues minor (CEbFAbBb)
-    4. Blues major (CDFGA)
-    5. Minor (CEbFGBb)
-  - Diatonic
-    6. Ionian
-    - Dorian
-    - Phrygian
-    - Lydian
-    - Mixolydian
-    - Aolian
-    - Locrian
-	
-- Bank 3: Just intonation/Pythagorean
+- Bank 2: Just intonation/Pythagorean
   - Just intonation
     1. Ptolemy's Intense Diatonic Syntonon, also Zarlino's scale (scl/ptolemy.scl)
     2. Ellis's Duodene : genus [33355] (scl/duodene.scl)
@@ -71,7 +55,7 @@ Analog:
     - 12 note
     - 17 note
 
-- Bank 4: Meantone
+- Bank 3: Meantone
   - Quarter comma all g 3/2-.25 comma
     1. 5 note
     - 7 note
@@ -87,56 +71,47 @@ Analog:
      1. 5 note
      - 7 note
      - 12 note
-	
-- Equal divisions
-  - First set
-    - 1 note (octaves)
-    - 2 note (tritones)
-    - 3 note (M3)
-    - 4 note (m3)
-    - 5 note
-    - 6 note (whole tones)
-    - 7 note
-    - 8 note
-    - 9 note
-    - 10 note
-    - 11 note
-    - 12 note (semitones)
-  - Second set
-    - 13 note
-    - 14 note
-    - 15 note
-    - 16 note
-    - 17 note
-    - 18 note
-    - 19 note
-    - 20 note
-    - 21 note
-    - 22 note
-    - 23 note
-    - 24 note (quarter tones)
-- Chords
-  - Major triad
-  - Minor triad
-  - Dominant 7th
-  - Major 7th
-  - Minor 7th
-- Bohlen-Pierce (https://www.ziaspace.com/_academic/BP/page/) (10)
-  - Lambda
-  - Walker A
-  - Moll II
-  - Walker I
-  - Harmonic
-  - Walker II
-  - Dur I
-  - Moll I
-  - Walker B
-  - Chromatic
+ 
+- Bank 4: Well temperaments
+  1. Werckmeister III
+  - Werckmeister IV
+  - Werckmeister V
+  - Werckmeister VI
+  - Neidhardt I
+  - Neidhardt II
+  - Neidhardt III
+  - Kirnberger II
+  - Kirnberger III
+  - Vallotti
+  - Young 1
+  - Young 2
 
-Note on memory usage: Adding scales increases dynamic memory usage a little, because there are longer index arrays, but without PROGMEM usage only the scales actually in use take up more dynamic memory and with it they don't take any to speak of. Program memory usage (for a test of Quantizer library only):
+- Bank 5: Macrotonal (and 12-note) equal divisions
+  1. 1 note (octaves)
+  - 2 note (tritones)
+  - 3 note (major thirds)
+  - 4 note (minor thirds or diminished seventh)
+  - 5 note
+  - 6 note (whole tones)
+  - 7 note
+  - 8 note
+  - 9 note
+  - 10 note
+  - 11 note
+  - 12 note (semitones)
 
-- 2 scales (12-equal and 12-pythagorean) 5616 bytes
-- 13 scales (12-equal, 5 pentatonic modes, 7 diatonic modes) 7674 bytes
+- Bank 6: Microtonal equal divisions
+  1. 13 note
+  - 14 note
+  - 15 note
+  - 16 note
+  - 17 note
+  - 18 note
+  - 19 note
+  - 20 note
+  - 21 note
+  - 22 note
+  - 23 note
+  - 24 note (quarter tones)
 
-out of 30720 bytes available. So each scale uses ~ 200 bytes above whatever baseline is used by everything else. If that baseline is ~ 5000 bytes then we have ~ 25000 bytes for scales, enough for about 125 scales. Conveniently close to 12 banks of 12 scales especially if some banks are not filled entirely.
-
+In principle the code can be modified to handle more banks, but the chosen scales just about fill the program memory on the Nano.

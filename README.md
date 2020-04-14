@@ -15,6 +15,6 @@ The eventual intention is to have on the front panel, for each quantizer section
 - Trigger input. If a trigger source is plugged in here, the input CV is sampled and the output CV changed only when there is a trigger. Otherwise the output CV is held. If no trigger source is plugged in, the input CV is sampled and the output CV changed "continuously" (i.e. at some rapid rate). This gives a quantized (or not) sample and hold functionality.
 - CV output.
 - Scale selector. 12 position switch.
-- Bank selector. 12 position switch.
+- Bank selector. 6 position switch.
 
-There can be up to 12 scales stored in each of up to 12 banks, which makes 144 scales for those of you who've lost your calculator. ("Up to." Depending on the scales, 144 of them might exceed the Arduino's program memory capacity.) The scales are defined in the code and it's easy enough to change. There's a mechanism to convert Scala format scale files into data for the Quantizer library.
+There can be up to 12 scales stored in each of up to 6 banks, which makes 72 scales for those of you who've lost your calculator. ("Up to." Depending on the scales, 72 of them might exceed the Arduino's program memory capacity.) 65 scales are defined in the code and it's easy enough to change them. There's a mechanism to convert Scala format scale files, or definitions in terms of equal divisions of the octave or generators and periods into data for the Quantizer library.
