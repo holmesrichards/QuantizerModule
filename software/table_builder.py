@@ -57,6 +57,7 @@ def realOrRat (item):
     return value
 
 def onescale(item, scalenum, outputhandle, notecounter):
+    print item
     description = ""
     values = 0
     scale = []
@@ -69,7 +70,7 @@ def onescale(item, scalenum, outputhandle, notecounter):
         item = items[0]
     
     if item.startswith ("+g"):
-        items = item.split (" ")
+        items = item.split ()
         n = int(items[1])
         generator = realOrRat(items[2])
         if len(items) > 3:
@@ -89,7 +90,6 @@ def onescale(item, scalenum, outputhandle, notecounter):
         n = int(items[1])
         if items[0].startswith ("+e"):
             period = 1200.0
-            print items
             if len(items) > 2:
                 elist = [int(i) for i in items[2:]]
             else:
@@ -166,8 +166,7 @@ def onescale(item, scalenum, outputhandle, notecounter):
     table = ','.join(map(str, table)) 
     hints = ','.join(map(str, hints)) 
 
-    outputhandle.write("// " + item + "\n")
-    outputhandle.write("// " + description + "\n")
+    outputhandle.write("// " + str(scalenum) + " | " + item + " | " + description + "\n")
     outputhandle.write("const float Quantizer::scale" + str(scalenum) + "[] = { " + table + " };" + "\n")
     outputhandle.write("const int Quantizer::hints" + str(scalenum) + "[] = { " + hints + " };" + "\n")
 
