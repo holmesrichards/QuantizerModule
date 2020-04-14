@@ -2,18 +2,18 @@
 
 import os, sys
 
-# Open a file
 path = "./scl/"
 dirs = os.listdir( path )
 
 index = []
 
-# This would print all the files and directories
+n = 7
+
 for file in dirs:
    with open(path+file) as f: 
        desc = ""
        n = 0
-       first5 = ""
+       first_n = ""
        i = 0
        for line in f: 
            if line[0] == "!":
@@ -23,10 +23,10 @@ for file in dirs:
            elif n == 0:
                n = int(line)
            else:
-               first5 += " " + line.rstrip()
+               first_n += " " + line.rstrip()
                i = i + 1
-               if i >= 5:
-                   index.append ("{:5d}\t{:s}".format (n, first5 + " " + file))
+               if i >= n:
+                   index.append ("{:5d}\t{:s}".format (n, first_n + " " + file))
                    break
 
 for i in sorted(index):
