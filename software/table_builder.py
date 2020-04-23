@@ -6,7 +6,31 @@
 # Based on:
 # table_builder.py from https://github.com/bpcmusic/telex_scales
 #
-# Removed frequency table, added PROGMEM to declarations
+# Removed frequency table, added PROGMEM to declarations.
+#
+#
+# Added organization of scales into banks.
+#
+# In the absences of commands to the contrary each scale is assigned
+# to be the next scale in the same bank as the previous; first scale is
+# bank 1 (index 0), scale 1 (index 0)
+#
+# Use commands to change:
+#
+# +b <bank> [#description]
+# Append next scale to bank #<bank> (index <bank>-1) with given description
+# Description overwrites previous description if given
+#
+# +s <scale> 
+#
+# Assign next scale to scale number <scale> (index <scale>-1)
+#
+# +d <bank1> <scale1> <bank2> <scale2>
+#
+# Duplicate scale at bank <bank1>, scale <scale1> to bank <bank2>, scale <scale2>
+# (Dupicate entries made in bank/scale table, the scale data itself is not
+# duplicated.)
+#
 #
 # Added capability to generate scales as well as reading them
 # Input file lines can be:
@@ -37,6 +61,8 @@
 #
 # +q is the same as +e except a period to be equally divided is given. E.g.,
 # +q 13 3/1 for Bohlen-Pierce equal temperament.
+#
+# Script has minimal error checking so far!!
 
 import sys, getopt, math
 
@@ -183,6 +209,13 @@ except getopt.GetoptError:
 inputfile = "items.txt"
 
 notecounter = []
+scales = []
+hints = []
+nbank = 6  # number of banks
+nscale = 12  # number of scales per bank
+bankandscale = [[-1 for i in range(nscale)] for j in range(nbank)]
+lastscalesofar = [-1 for i in range(nbank)] # last scale index used so far in each bank
+bankdesc = ["" for i in range(nbank)]
 
 for opt, arg in opts:
     if opt in ("-i", "--ifile"):
@@ -192,31 +225,73 @@ if inputfile == "":
     sys.exit(2)
 
 i = 0
-
-scales = []
-hints = []
+curbank = 0  # index
+curscale = 0  # index
 
 with open("scales.cpp", "w") as outputfile:
     with open(inputfile) as list:
 	for item in list:
 	    item = item.strip()
-	    onescale(item, i, outputfile, notecounter)
-	    scales.append('scale' + str(i))
-	    hints.append('hints' + str(i))
-	    i += 1
+            # Check if it's a command rather than a scale definition
+            if item.startswith ("+b") or item.startswith ("+s") or item.startswith ("+d"):
+                print item
+                description = ""
+                if "#" in item:
+                    items = item.split ("#")
+                    description = items[1]
+                    item = items[0]
+                items = item.split ()
+                if items[0] == "+b":
+                    # Change bank assignment for next scale
+                    curbank = int(items[1]) - 1
+                    if not (description == ""):
+                        bankdesc[curbank] = description
+                    curscale = lastscalesofar[curbank] + 1
+                if items[0] == "+s":
+                    # Change scale assignment for next scale
+                    curscale = int(items[1]) - 1
+                if items[0] == "+d":
+                    # Duplicate a bank assignment
+                    obank = int(items[1])-1
+                    oscale = int(items[2])-1
+                    dbank = int(items[3])-1
+                    dscale = int(items[4])-1
+                    bankandscale[dbank][dscale] = bankandscale[obank][oscale]
+                    if dscale > lastscalesofar[dbank]:
+                        lastscalesofar[dbank] = dscale
+            else:
+	        onescale(item, i, outputfile, notecounter)
+	        scales.append('scale' + str(i))
+	        hints.append('hints' + str(i))
+                bankandscale[curbank][curscale] = i
+                curscale += 1
+	        i += 1
 
     notelist = ','.join(map(str, notecounter))
     scales = ','.join(map(str, scales))
     hints = ','.join(map(str, hints))
-
+    
     outputfile.write("\n");
     outputfile.write("const int Quantizer::notecount[] = { " + notelist + " };" + "\n")
     outputfile.write("\n");
     
     outputfile.write("const float *Quantizer::scales[] = { " + scales + " };" + "\n")
     outputfile.write("const int *Quantizer::hints[] = { " + hints + " };" + "\n")
-    
+
     outputfile.write("\n\n");
+    outputfile.write("const int Quantizer::bankandscale[" + str(nbank) + "][" + str(nscale) + "] = {\n")
+    for b in range (nbank):
+        outputfile.write ("  {")
+        for s in range (nscale-1):
+            outputfile.write (" {:3d},".format(bankandscale[b][s]))
+        outputfile.write (" {:3d}".format(bankandscale[b][nscale-1]))
+        outputfile.write (" }" + ("," if b < nbank-1 else " "))
+        outputfile.write (" // {:2d}".format(b+1))
+        if not bankdesc[b] == "":
+            outputfile.write (" " + bankdesc[b])
+        outputfile.write ("\n")
+
+    outputfile.write("};\n\n");
     outputfile.write("// for protected header\n");
     outputfile.write("const static int scaleCount = " + str(i) + ";\n");
     outputfile.write("static const int *hints[" + str(i) + "];\n");
