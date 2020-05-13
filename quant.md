@@ -1,4 +1,4 @@
-# dacarduino dual quantizer
+# dac/ino dual quantizer
 
 ## Inputs (for each section):
 

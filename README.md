@@ -1,9 +1,9 @@
 # QuantizerModule
 Code and hardware for Kosmo/Eurorack quantizer module
 
-This is a dual quantizer based on the [dacarduino](https://github.com/holmesrichards/dacarduino) board. As such it uses the dacarduino library as well as the Quantizer library in this repository.
+This is a dual quantizer based on the [dac/ino](https://github.com/holmesrichards/dac_ino) board. As such it uses the dac_ino library as well as the Quantizer library in this repository.
 
-Design is for Kosmo format module but the PCB and code would work equally well for a Eurorack version. It would just need a smaller front panel.
+Design is for Kosmo format module but the PCB and code would work equally well for a Eurorack version if the board were mounted perpendicular to the panel. It would just need a smaller front panel. Likewise with perpendicular mounting it could be a smaller single Kosmo quantizer.
 
 THIS IS A WORK IN PROGRESS.
 

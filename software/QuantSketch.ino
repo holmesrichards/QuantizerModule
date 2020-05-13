@@ -3,12 +3,12 @@
 Dual Quantizer
 Rich Holmes 4/2020
 
-Uses dacarduino library to communicate with board and quantize library
+Uses dac_ino library to communicate with board and quantize library
 to do the quantization, this is just the glue in between...
 
  */
 
-#include <dacarduino.h>
+#include <dac_ino.h>
 #include <Quantizer.h>
 
 //  0 - 4095  = 0 - 5V
@@ -23,11 +23,11 @@ using namespace dcrd;
 
 Quantizer q[2];
 
-dacarduino::CVChannel cvchan[2] = {dacarduino::CVChannel::A, dacarduino::CVChannel::B};
-dacarduino::CVChannel psbankchan[2] = {dacarduino::CVChannel::C, dacarduino::CVChannel::E};
-dacarduino::CVChannel psscalechan[2] = {dacarduino::CVChannel::D, dacarduino::CVChannel::F};
-dacarduino::GateChannel gatechan[2] = {dacarduino::GateChannel::A, dacarduino::GateChannel::C};
-dacarduino::GateChannel trigchan[2] = {dacarduino::GateChannel::B, dacarduino::GateChannel::D};
+dac_ino::CVChannel cvchan[2] = {dac_ino::CVChannel::A, dac_ino::CVChannel::B};
+dac_ino::CVChannel psbankchan[2] = {dac_ino::CVChannel::C, dac_ino::CVChannel::E};
+dac_ino::CVChannel psscalechan[2] = {dac_ino::CVChannel::D, dac_ino::CVChannel::F};
+dac_ino::GateChannel gatechan[2] = {dac_ino::GateChannel::A, dac_ino::GateChannel::C};
+dac_ino::GateChannel trigchan[2] = {dac_ino::GateChannel::B, dac_ino::GateChannel::D};
 
 int cv; // the CV before and after quantization
 int ps[2]; // position switch states
@@ -48,22 +48,22 @@ void setup()
 #if DEBUG
   Serial.begin(9600);
 #endif
-  dacarduinoBoard.begin();
+  dac_inoBoard.begin();
   q[0].SetScale (bank[0], scale[0]);
   q[1].SetScale (bank[1], scale[1]);
 
   // Set up trigger interrupts
-  dacarduinoBoard.gateInputInterrupt
+  dac_inoBoard.gateInputInterrupt
     (
      trigchan[0],
      onTrig0RisingEdge,
-     dacarduino::GateInterrupt::RisingEdge
+     dac_ino::GateInterrupt::RisingEdge
      );
-  dacarduinoBoard.gateInputInterrupt
+  dac_inoBoard.gateInputInterrupt
     (
      trigchan[1],
      onTrig1RisingEdge,
-     dacarduino::GateInterrupt::RisingEdge
+     dac_ino::GateInterrupt::RisingEdge
      );
 }
 
@@ -74,8 +74,8 @@ void loop()
   for (int iq = 0; iq < 2; ++iq)
     {
       // Read the rotary switches
-      ps[0] = dacarduinoBoard.readCV(psbankchan[iq]);
-      ps[1] = dacarduinoBoard.readCV(psscalechan[iq]);
+      ps[0] = dac_inoBoard.readCV(psbankchan[iq]);
+      ps[1] = dac_inoBoard.readCV(psscalechan[iq]);
       
 #if DEBUG
       if (triggered[iq])
@@ -149,10 +149,10 @@ void loop()
       // Handle CV but only IF trigger is on
       // which happens if we've input a trigger or if there's
       // nothing plugged into the trigger
-      bool trig = dacarduinoBoard.readGate(trigchan[iq]);
+      bool trig = dac_inoBoard.readGate(trigchan[iq]);
       if (trig)
 	{
-	  cv = dacarduinoBoard.readCV(cvchan[iq]);
+	  cv = dac_inoBoard.readCV(cvchan[iq]);
 
 #if DEBUG
 	  Serial.print ("Read quantizer ");
@@ -164,12 +164,12 @@ void loop()
 	  // which happens if we've input a gate or if there's
 	  // nothing plugged into the gate, and the toggle switch
 	  // is on
-	  bool gate = dacarduinoBoard.readGate(gatechan[iq]);
+	  bool gate = dac_inoBoard.readGate(gatechan[iq]);
 	  if (gate)
 	    cv = q[iq].Quantize(cv).Value;
       
 	  // Send it out
-	  dacarduinoBoard.writeCV(cvchan[iq], cv);
+	  dac_inoBoard.writeCV(cvchan[iq], cv);
 #if DEBUG
 	  Serial.print ("Set CV ");
 	  Serial.println (cv);
@@ -187,9 +187,9 @@ void loop()
 // When we see a trigger, quantize the input immediately
 void onTrig0RisingEdge()
 {
-  cv = dacarduinoBoard.readCV(cvchan[0]);
+  cv = dac_inoBoard.readCV(cvchan[0]);
   cv = q[0].Quantize(cv).Value;
-  dacarduinoBoard.writeCV(cvchan[0], cv);
+  dac_inoBoard.writeCV(cvchan[0], cv);
 #if DEBUG
   cvtrig[0] = cv;
   triggered[0] = true;
@@ -198,9 +198,9 @@ void onTrig0RisingEdge()
 
 void onTrig1RisingEdge()
 {
-  cv = dacarduinoBoard.readCV(cvchan[1]);
+  cv = dac_inoBoard.readCV(cvchan[1]);
   cv = q[1].Quantize(cv).Value;
-  dacarduinoBoard.writeCV(cvchan[1], cv);
+  dac_inoBoard.writeCV(cvchan[1], cv);
 #if DEBUG
   cvtrig[0] = cv;
   triggered[0] = true;
