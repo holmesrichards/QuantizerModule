@@ -19,4 +19,17 @@ The eventual intention is to have on the front panel, for each quantizer section
 
 There can be up to 12 scales stored in each of up to 6 banks, which makes 72 scales for those of you who've lost your calculator. ("Up to." Depending on the scales, 72 of them might exceed the Arduino's program memory capacity.) 65 scales are defined in the code and it's easy enough to change them. There's a mechanism to convert Scala format scale files, or definitions in terms of equal divisions of the octave or generators and periods into data for the Quantizer library.
 
-Current version uses v1.2 release of dac/ino. (Note that current version of dac/ino is incompatible due to rearrangement of headers.) It does not use either Gate Out A or B, nor does it use the Molex headers for CV In B and D, so these can be omitted from the dac/ino assembly.
+## dac/ino build information
+Current version uses v1.3 release of dac/ino. 
+
+Quantizer does not use:
+
+* Gate Out A and B
+* All pin headers (aside from 3-pin jumper headers)
+* VCC/Gnd Molex header
+
+so these components can be omitted: Q1, Q2, R10–13 (don't omit R14!), J5–J8, J10, J11, J14
+
+The 1k output resistors R8 and R9 should be replaced by wire jumpers for good 1 V/oct accuracy.
+
+dac/ino CV outputs can range 0–10V or ±5V, but CV input is limited to 0–5V so quantizer output is limited to that range too. Set jumpers for 0–10V outputs; software will limit digital outputs to 0–2047. (This means CV output resolution is 11 bits rather than 12. Hardware (gain of output op amp) and software could be tweaked for 12 bit resolution but this has not been tested.) If desired you can omit J1 and J2 in favor of hardwired jumpers.

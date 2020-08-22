@@ -1,0 +1,1098 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "Dual quantizer panel components"
+Date "2020-08-04"
+Rev ""
+Comp "Rich Holmes / Analog Output"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Switch:SW_SPST SW1
+U 1 1 5ECF2ACF
+P 2550 6850
+F 0 "SW1" H 2550 7085 50  0000 C CNN
+F 1 "SW_SPST" H 2550 6994 50  0000 C CNN
+F 2 "Daughterboard:SPDT-toggle-switch-1M-series" H 2550 6850 50  0001 C CNN
+F 3 "~" H 2550 6850 50  0001 C CNN
+	1    2550 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT RV1
+U 1 1 5ECF9932
+P 2150 6000
+F 0 "RV1" H 2081 6046 50  0000 R CNN
+F 1 "100k" H 2081 5955 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_CircularHoles" H 2150 6000 50  0001 C CNN
+F 3 "~" H 2150 6000 50  0001 C CNN
+	1    2150 6000
+	1    0    0    1   
+$EndComp
+$Comp
+L Switch:SW_Rotary12 SW?
+U 1 1 5EE1EDE3
+P 1825 1825
+F 0 "SW?" H 1725 2606 50  0000 C CNN
+F 1 "SW_Rotary12" H 1725 2515 50  0000 C CNN
+F 2 "" H 1625 2525 50  0001 C CNN
+F 3 "http://cdn-reichelt.de/documents/datenblatt/C200/DS-Serie%23LOR.pdf" H 1625 2525 50  0001 C CNN
+	1    1825 1825
+	1    0    0    -1  
+$EndComp
+Connection ~ 5225 1325
+$Comp
+L Device:R R?
+U 1 1 5EE1EDEB
+P 5375 1325
+AR Path="/5EE0E42E/5EE1EDEB" Ref="R?"  Part="1" 
+AR Path="/5EE1EDEB" Ref="R?"  Part="1" 
+F 0 "R?" V 5168 1325 50  0000 C CNN
+F 1 "1k" V 5259 1325 50  0000 C CNN
+F 2 "" V 5305 1325 50  0001 C CNN
+F 3 "~" H 5375 1325 50  0001 C CNN
+	1    5375 1325
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	5225 1325 5225 1425
+Connection ~ 4925 1425
+$Comp
+L Device:R R?
+U 1 1 5EE1EDF3
+P 5075 1425
+F 0 "R?" V 4868 1425 50  0000 C CNN
+F 1 "1k" V 4959 1425 50  0000 C CNN
+F 2 "" V 5005 1425 50  0001 C CNN
+F 3 "~" H 5075 1425 50  0001 C CNN
+	1    5075 1425
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	4925 1425 4925 1525
+Connection ~ 4625 1525
+$Comp
+L Device:R R?
+U 1 1 5EE1EDFB
+P 4775 1525
+F 0 "R?" V 4568 1525 50  0000 C CNN
+F 1 "1k" V 4659 1525 50  0000 C CNN
+F 2 "" V 4705 1525 50  0001 C CNN
+F 3 "~" H 4775 1525 50  0001 C CNN
+	1    4775 1525
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	4625 1525 4625 1625
+Connection ~ 4325 1625
+$Comp
+L Device:R R?
+U 1 1 5EE1EE03
+P 4475 1625
+F 0 "R?" V 4268 1625 50  0000 C CNN
+F 1 "1k" V 4359 1625 50  0000 C CNN
+F 2 "" V 4405 1625 50  0001 C CNN
+F 3 "~" H 4475 1625 50  0001 C CNN
+	1    4475 1625
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	4325 1625 4325 1725
+$Comp
+L Device:R R?
+U 1 1 5EE1EE0A
+P 4175 1725
+F 0 "R?" V 3968 1725 50  0000 C CNN
+F 1 "1k" V 4059 1725 50  0000 C CNN
+F 2 "" V 4105 1725 50  0001 C CNN
+F 3 "~" H 4175 1725 50  0001 C CNN
+	1    4175 1725
+	0    1    -1   0   
+$EndComp
+Connection ~ 3725 1925
+$Comp
+L Device:R R?
+U 1 1 5EE1EE18
+P 3875 1925
+F 0 "R?" V 3668 1925 50  0000 C CNN
+F 1 "1k" V 3759 1925 50  0000 C CNN
+F 2 "" V 3805 1925 50  0001 C CNN
+F 3 "~" H 3875 1925 50  0001 C CNN
+	1    3875 1925
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	3725 1925 3725 2025
+Wire Wire Line
+	2225 1925 3725 1925
+Connection ~ 3425 2025
+$Comp
+L Device:R R?
+U 1 1 5EE1EE21
+P 3575 2025
+F 0 "R?" V 3368 2025 50  0000 C CNN
+F 1 "1k" V 3459 2025 50  0000 C CNN
+F 2 "" V 3505 2025 50  0001 C CNN
+F 3 "~" H 3575 2025 50  0001 C CNN
+	1    3575 2025
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	3425 2025 3425 2125
+Wire Wire Line
+	2225 2025 3425 2025
+Connection ~ 3125 2125
+$Comp
+L Device:R R?
+U 1 1 5EE1EE2A
+P 3275 2125
+F 0 "R?" V 3068 2125 50  0000 C CNN
+F 1 "1k" V 3159 2125 50  0000 C CNN
+F 2 "" V 3205 2125 50  0001 C CNN
+F 3 "~" H 3275 2125 50  0001 C CNN
+	1    3275 2125
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	3125 2125 3125 2225
+Wire Wire Line
+	2225 2125 3125 2125
+Connection ~ 2825 2225
+$Comp
+L Device:R R?
+U 1 1 5EE1EE33
+P 2975 2225
+F 0 "R?" V 2768 2225 50  0000 C CNN
+F 1 "1k" V 2859 2225 50  0000 C CNN
+F 2 "" V 2905 2225 50  0001 C CNN
+F 3 "~" H 2975 2225 50  0001 C CNN
+	1    2975 2225
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	2825 2225 2825 2325
+Wire Wire Line
+	2225 2225 2825 2225
+$Comp
+L Device:R R?
+U 1 1 5EE1EE3B
+P 2675 2325
+AR Path="/5EE0E42E/5EE1EE3B" Ref="R?"  Part="1" 
+AR Path="/5EE1EE3B" Ref="R?"  Part="1" 
+F 0 "R?" V 2468 2325 50  0000 C CNN
+F 1 "1k" V 2559 2325 50  0000 C CNN
+F 2 "" V 2605 2325 50  0001 C CNN
+F 3 "~" H 2675 2325 50  0001 C CNN
+	1    2675 2325
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	2225 2325 2525 2325
+Wire Wire Line
+	2525 2325 2525 2425
+Wire Wire Line
+	4025 1725 2225 1725
+Wire Wire Line
+	2225 1625 4325 1625
+Wire Wire Line
+	2225 1525 4625 1525
+Wire Wire Line
+	2225 1425 4925 1425
+Wire Wire Line
+	2225 1325 5225 1325
+Wire Wire Line
+	4025 1925 4025 1725
+Connection ~ 4025 1725
+Connection ~ 2525 2325
+$Comp
+L power:VCC #PWR?
+U 1 1 5EE28ACF
+P 2225 2775
+F 0 "#PWR?" H 2225 2625 50  0001 C CNN
+F 1 "VCC" V 2243 2902 50  0000 L CNN
+F 2 "" H 2225 2775 50  0001 C CNN
+F 3 "" H 2225 2775 50  0001 C CNN
+	1    2225 2775
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EE1EE10
+P 5525 1325
+AR Path="/5EE0E42E/5EE1EE10" Ref="#PWR?"  Part="1" 
+AR Path="/5EE1EE10" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 5525 1075 50  0001 C CNN
+F 1 "GND" H 5530 1152 50  0000 C CNN
+F 2 "" H 5525 1325 50  0001 C CNN
+F 3 "" H 5525 1325 50  0001 C CNN
+	1    5525 1325
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5EE95D0E
+P 2375 2425
+AR Path="/5EE0E42E/5EE95D0E" Ref="R?"  Part="1" 
+AR Path="/5EE95D0E" Ref="R?"  Part="1" 
+F 0 "R?" V 2168 2425 50  0000 C CNN
+F 1 "1k" V 2259 2425 50  0000 C CNN
+F 2 "" V 2305 2425 50  0001 C CNN
+F 3 "~" H 2375 2425 50  0001 C CNN
+	1    2375 2425
+	0    1    -1   0   
+$EndComp
+Connection ~ 5525 1325
+Wire Wire Line
+	2225 1225 5525 1225
+Wire Wire Line
+	5525 1225 5525 1325
+$Comp
+L Switch:SW_Rotary12 SW?
+U 1 1 5EEAB262
+P 1825 3625
+F 0 "SW?" H 1725 4406 50  0000 C CNN
+F 1 "SW_Rotary12" H 1725 4315 50  0000 C CNN
+F 2 "" H 1625 4325 50  0001 C CNN
+F 3 "http://cdn-reichelt.de/documents/datenblatt/C200/DS-Serie%23LOR.pdf" H 1625 4325 50  0001 C CNN
+	1    1825 3625
+	1    0    0    -1  
+$EndComp
+Connection ~ 5225 3125
+$Comp
+L Device:R R?
+U 1 1 5EEAB269
+P 5375 3125
+AR Path="/5EE0E42E/5EEAB269" Ref="R?"  Part="1" 
+AR Path="/5EEAB269" Ref="R?"  Part="1" 
+F 0 "R?" V 5168 3125 50  0000 C CNN
+F 1 "1k" V 5259 3125 50  0000 C CNN
+F 2 "" V 5305 3125 50  0001 C CNN
+F 3 "~" H 5375 3125 50  0001 C CNN
+	1    5375 3125
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	5225 3125 5225 3225
+Connection ~ 4925 3225
+$Comp
+L Device:R R?
+U 1 1 5EEAB271
+P 5075 3225
+F 0 "R?" V 4868 3225 50  0000 C CNN
+F 1 "1k" V 4959 3225 50  0000 C CNN
+F 2 "" V 5005 3225 50  0001 C CNN
+F 3 "~" H 5075 3225 50  0001 C CNN
+	1    5075 3225
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	4925 3225 4925 3325
+Connection ~ 4625 3325
+$Comp
+L Device:R R?
+U 1 1 5EEAB279
+P 4775 3325
+F 0 "R?" V 4568 3325 50  0000 C CNN
+F 1 "1k" V 4659 3325 50  0000 C CNN
+F 2 "" V 4705 3325 50  0001 C CNN
+F 3 "~" H 4775 3325 50  0001 C CNN
+	1    4775 3325
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	4625 3325 4625 3425
+Connection ~ 4325 3425
+$Comp
+L Device:R R?
+U 1 1 5EEAB281
+P 4475 3425
+F 0 "R?" V 4268 3425 50  0000 C CNN
+F 1 "1k" V 4359 3425 50  0000 C CNN
+F 2 "" V 4405 3425 50  0001 C CNN
+F 3 "~" H 4475 3425 50  0001 C CNN
+	1    4475 3425
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	4325 3425 4325 3525
+$Comp
+L Device:R R?
+U 1 1 5EEAB288
+P 4175 3525
+F 0 "R?" V 3968 3525 50  0000 C CNN
+F 1 "1k" V 4059 3525 50  0000 C CNN
+F 2 "" V 4105 3525 50  0001 C CNN
+F 3 "~" H 4175 3525 50  0001 C CNN
+	1    4175 3525
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	4025 3525 2225 3525
+Wire Wire Line
+	2225 3425 4325 3425
+Wire Wire Line
+	2225 3325 4625 3325
+Wire Wire Line
+	2225 3225 4925 3225
+Wire Wire Line
+	2225 3125 5225 3125
+Wire Wire Line
+	4025 3725 4025 3525
+Connection ~ 4025 3525
+$Comp
+L power:VCC #PWR?
+U 1 1 5EEAB2C2
+P 4025 3725
+F 0 "#PWR?" H 4025 3575 50  0001 C CNN
+F 1 "VCC" V 4043 3852 50  0000 L CNN
+F 2 "" H 4025 3725 50  0001 C CNN
+F 3 "" H 4025 3725 50  0001 C CNN
+	1    4025 3725
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EEAB2C8
+P 5525 3125
+AR Path="/5EE0E42E/5EEAB2C8" Ref="#PWR?"  Part="1" 
+AR Path="/5EEAB2C8" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 5525 2875 50  0001 C CNN
+F 1 "GND" H 5530 2952 50  0000 C CNN
+F 2 "" H 5525 3125 50  0001 C CNN
+F 3 "" H 5525 3125 50  0001 C CNN
+	1    5525 3125
+	1    0    0    -1  
+$EndComp
+Connection ~ 5525 3125
+Wire Wire Line
+	2225 3025 5525 3025
+Wire Wire Line
+	5525 3025 5525 3125
+Wire Wire Line
+	2225 2425 2225 2775
+Connection ~ 2225 2425
+$Comp
+L Connector:AudioJack2_SwitchT J?
+U 1 1 5F2A453E
+P 1500 4950
+F 0 "J?" H 1321 4883 50  0000 R CNN
+F 1 "AudioJack2_SwitchT" H 1321 4974 50  0000 R CNN
+F 2 "" H 1500 4950 50  0001 C CNN
+F 3 "~" H 1500 4950 50  0001 C CNN
+	1    1500 4950
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F2ACA3B
+P 1800 5150
+AR Path="/5EE0E42E/5F2ACA3B" Ref="#PWR?"  Part="1" 
+AR Path="/5F2ACA3B" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 1800 4900 50  0001 C CNN
+F 1 "GND" H 1805 4977 50  0000 C CNN
+F 2 "" H 1800 5150 50  0001 C CNN
+F 3 "" H 1800 5150 50  0001 C CNN
+	1    1800 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 4850 1800 4850
+Wire Wire Line
+	1800 4850 1800 5050
+Wire Wire Line
+	1700 5050 1800 5050
+Connection ~ 1800 5050
+Wire Wire Line
+	1800 5050 1800 5150
+Wire Wire Line
+	1700 4950 2300 4950
+Text GLabel 2300 4950 2    50   Output ~ 0
+CV1_1
+$Comp
+L Connector:AudioJack2_SwitchT J?
+U 1 1 5F2B612B
+P 1500 5750
+F 0 "J?" H 1321 5683 50  0000 R CNN
+F 1 "AudioJack2_SwitchT" H 1321 5774 50  0000 R CNN
+F 2 "" H 1500 5750 50  0001 C CNN
+F 3 "~" H 1500 5750 50  0001 C CNN
+	1    1500 5750
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F2B6131
+P 1800 5950
+AR Path="/5EE0E42E/5F2B6131" Ref="#PWR?"  Part="1" 
+AR Path="/5F2B6131" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 1800 5700 50  0001 C CNN
+F 1 "GND" H 1805 5777 50  0000 C CNN
+F 2 "" H 1800 5950 50  0001 C CNN
+F 3 "" H 1800 5950 50  0001 C CNN
+	1    1800 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 5650 1800 5650
+Wire Wire Line
+	1700 5850 1800 5850
+Wire Wire Line
+	1800 5850 1800 5950
+Wire Wire Line
+	1700 5750 2150 5750
+Text GLabel 2450 6000 2    50   Output ~ 0
+CV2_1
+Wire Wire Line
+	2300 6000 2450 6000
+$Comp
+L power:GND #PWR?
+U 1 1 5F2BC046
+P 2150 6250
+AR Path="/5EE0E42E/5F2BC046" Ref="#PWR?"  Part="1" 
+AR Path="/5F2BC046" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 2150 6000 50  0001 C CNN
+F 1 "GND" H 2155 6077 50  0000 C CNN
+F 2 "" H 2150 6250 50  0001 C CNN
+F 3 "" H 2150 6250 50  0001 C CNN
+	1    2150 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 5750 2150 5850
+Wire Wire Line
+	2150 6150 2150 6250
+$Comp
+L Connector:AudioJack2_SwitchT J?
+U 1 1 5F2C52CA
+P 1500 6850
+F 0 "J?" H 1321 6783 50  0000 R CNN
+F 1 "AudioJack2_SwitchT" H 1321 6874 50  0000 R CNN
+F 2 "" H 1500 6850 50  0001 C CNN
+F 3 "~" H 1500 6850 50  0001 C CNN
+	1    1500 6850
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F2C52D0
+P 1800 7050
+AR Path="/5EE0E42E/5F2C52D0" Ref="#PWR?"  Part="1" 
+AR Path="/5F2C52D0" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 1800 6800 50  0001 C CNN
+F 1 "GND" H 1805 6877 50  0000 C CNN
+F 2 "" H 1800 7050 50  0001 C CNN
+F 3 "" H 1800 7050 50  0001 C CNN
+	1    1800 7050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 6750 1800 6750
+Wire Wire Line
+	1700 6950 1800 6950
+Wire Wire Line
+	1800 6950 1800 7050
+$Comp
+L power:VCC #PWR?
+U 1 1 5F2C52DB
+P 2200 6750
+F 0 "#PWR?" H 2200 6600 50  0001 C CNN
+F 1 "VCC" H 2218 6877 50  0000 L CNN
+F 2 "" H 2200 6750 50  0001 C CNN
+F 3 "" H 2200 6750 50  0001 C CNN
+	1    2200 6750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 6850 2800 6850
+$Comp
+L power:GND #PWR?
+U 1 1 5F2C52E2
+P 2800 7350
+AR Path="/5EE0E42E/5F2C52E2" Ref="#PWR?"  Part="1" 
+AR Path="/5F2C52E2" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 2800 7100 50  0001 C CNN
+F 1 "GND" H 2805 7177 50  0000 C CNN
+F 2 "" H 2800 7350 50  0001 C CNN
+F 3 "" H 2800 7350 50  0001 C CNN
+	1    2800 7350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 7250 2800 7350
+Text GLabel 2900 6850 2    50   Output ~ 0
+QUANTIZE_1
+Wire Wire Line
+	1700 6850 2350 6850
+$Comp
+L Device:R R?
+U 1 1 5F2D5069
+P 1950 5650
+F 0 "R?" V 1743 5650 50  0000 C CNN
+F 1 "10k" V 1834 5650 50  0000 C CNN
+F 2 "" V 1880 5650 50  0001 C CNN
+F 3 "~" H 1950 5650 50  0001 C CNN
+	1    1950 5650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F2D5BFA
+P 1950 6750
+F 0 "R?" V 1743 6750 50  0000 C CNN
+F 1 "10k" V 1834 6750 50  0000 C CNN
+F 2 "" V 1880 6750 50  0001 C CNN
+F 3 "~" H 1950 6750 50  0001 C CNN
+	1    1950 6750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F2D9D4B
+P 2800 7100
+F 0 "R?" H 2730 7054 50  0000 R CNN
+F 1 "100k" H 2730 7145 50  0000 R CNN
+F 2 "" V 2730 7100 50  0001 C CNN
+F 3 "~" H 2800 7100 50  0001 C CNN
+	1    2800 7100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2800 6950 2800 6850
+Connection ~ 2800 6850
+Wire Wire Line
+	2800 6850 2900 6850
+$Comp
+L Connector:AudioJack2_SwitchT J?
+U 1 1 5F2E4F0C
+P 4250 4950
+F 0 "J?" H 4071 4883 50  0000 R CNN
+F 1 "AudioJack2_SwitchT" H 4071 4974 50  0000 R CNN
+F 2 "" H 4250 4950 50  0001 C CNN
+F 3 "~" H 4250 4950 50  0001 C CNN
+	1    4250 4950
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F2E4F12
+P 4550 5150
+AR Path="/5EE0E42E/5F2E4F12" Ref="#PWR?"  Part="1" 
+AR Path="/5F2E4F12" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 4550 4900 50  0001 C CNN
+F 1 "GND" H 4555 4977 50  0000 C CNN
+F 2 "" H 4550 5150 50  0001 C CNN
+F 3 "" H 4550 5150 50  0001 C CNN
+	1    4550 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 4850 4550 4850
+Wire Wire Line
+	4450 5050 4550 5050
+Wire Wire Line
+	4550 5050 4550 5150
+$Comp
+L power:VCC #PWR?
+U 1 1 5F2E4F1B
+P 4950 4850
+F 0 "#PWR?" H 4950 4700 50  0001 C CNN
+F 1 "VCC" H 4968 4977 50  0000 L CNN
+F 2 "" H 4950 4850 50  0001 C CNN
+F 3 "" H 4950 4850 50  0001 C CNN
+	1    4950 4850
+	1    0    0    -1  
+$EndComp
+Text GLabel 5250 4950 2    50   Output ~ 0
+TRIGGER_1
+$Comp
+L Device:R R?
+U 1 1 5F2E4F2B
+P 4700 4850
+F 0 "R?" V 4493 4850 50  0000 C CNN
+F 1 "10k" V 4584 4850 50  0000 C CNN
+F 2 "" V 4630 4850 50  0001 C CNN
+F 3 "~" H 4700 4850 50  0001 C CNN
+	1    4700 4850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4450 4950 5250 4950
+$Comp
+L Connector:AudioJack2_SwitchT J?
+U 1 1 5F2EF2E0
+P 4250 5750
+F 0 "J?" H 4071 5683 50  0000 R CNN
+F 1 "AudioJack2_SwitchT" H 4071 5774 50  0000 R CNN
+F 2 "" H 4250 5750 50  0001 C CNN
+F 3 "~" H 4250 5750 50  0001 C CNN
+	1    4250 5750
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F2EF2E6
+P 3950 5950
+AR Path="/5EE0E42E/5F2EF2E6" Ref="#PWR?"  Part="1" 
+AR Path="/5F2EF2E6" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 3950 5700 50  0001 C CNN
+F 1 "GND" H 3955 5777 50  0000 C CNN
+F 2 "" H 3950 5950 50  0001 C CNN
+F 3 "" H 3950 5950 50  0001 C CNN
+	1    3950 5950
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 5850 3950 5850
+Wire Wire Line
+	3950 5850 3950 5950
+Wire Wire Line
+	4050 5750 3450 5750
+Text GLabel 3450 5750 0    50   Input ~ 0
+CV_OUT_1
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5F2F1E5B
+P 7250 1750
+F 0 "J?" H 7168 1967 50  0000 C CNN
+F 1 "MOLEX 2 PIN" H 7168 1876 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 7250 1750 50  0001 C CNN
+F 3 "~" H 7250 1750 50  0001 C CNN
+	1    7250 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F2F2843
+P 6950 1950
+AR Path="/5EE0E42E/5F2F2843" Ref="#PWR?"  Part="1" 
+AR Path="/5F2F2843" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 6950 1700 50  0001 C CNN
+F 1 "GND" H 6955 1777 50  0000 C CNN
+F 2 "" H 6950 1950 50  0001 C CNN
+F 3 "" H 6950 1950 50  0001 C CNN
+	1    6950 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 1850 6950 1850
+Wire Wire Line
+	6950 1850 6950 1950
+Wire Wire Line
+	7050 1750 6700 1750
+Text GLabel 6700 1750 0    50   Input ~ 0
+CV1_1
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5F2FA35D
+P 7250 2450
+F 0 "J?" H 7168 2667 50  0000 C CNN
+F 1 "MOLEX 2 PIN" H 7168 2576 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 7250 2450 50  0001 C CNN
+F 3 "~" H 7250 2450 50  0001 C CNN
+	1    7250 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F2FA363
+P 6950 2650
+AR Path="/5EE0E42E/5F2FA363" Ref="#PWR?"  Part="1" 
+AR Path="/5F2FA363" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 6950 2400 50  0001 C CNN
+F 1 "GND" H 6955 2477 50  0000 C CNN
+F 2 "" H 6950 2650 50  0001 C CNN
+F 3 "" H 6950 2650 50  0001 C CNN
+	1    6950 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 2550 6950 2550
+Wire Wire Line
+	6950 2550 6950 2650
+Wire Wire Line
+	7050 2450 6700 2450
+Text GLabel 6700 2450 0    50   Input ~ 0
+CV2_1
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5F2FD9A4
+P 7250 3150
+F 0 "J?" H 7168 3367 50  0000 C CNN
+F 1 "MOLEX 2 PIN" H 7168 3276 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 7250 3150 50  0001 C CNN
+F 3 "~" H 7250 3150 50  0001 C CNN
+	1    7250 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F2FD9AA
+P 6950 3350
+AR Path="/5EE0E42E/5F2FD9AA" Ref="#PWR?"  Part="1" 
+AR Path="/5F2FD9AA" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 6950 3100 50  0001 C CNN
+F 1 "GND" H 6955 3177 50  0000 C CNN
+F 2 "" H 6950 3350 50  0001 C CNN
+F 3 "" H 6950 3350 50  0001 C CNN
+	1    6950 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 3250 6950 3250
+Wire Wire Line
+	6950 3250 6950 3350
+Wire Wire Line
+	7050 3150 6700 3150
+Text GLabel 6700 3150 0    50   Input ~ 0
+QUANTIZE_1
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5F30173D
+P 9250 1750
+F 0 "J?" H 9168 1967 50  0000 C CNN
+F 1 "MOLEX 2 PIN" H 9168 1876 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 9250 1750 50  0001 C CNN
+F 3 "~" H 9250 1750 50  0001 C CNN
+	1    9250 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F301743
+P 8950 1950
+AR Path="/5EE0E42E/5F301743" Ref="#PWR?"  Part="1" 
+AR Path="/5F301743" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 8950 1700 50  0001 C CNN
+F 1 "GND" H 8955 1777 50  0000 C CNN
+F 2 "" H 8950 1950 50  0001 C CNN
+F 3 "" H 8950 1950 50  0001 C CNN
+	1    8950 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 1850 8950 1850
+Wire Wire Line
+	8950 1850 8950 1950
+Wire Wire Line
+	9050 1750 8700 1750
+Text GLabel 8700 1750 0    50   Input ~ 0
+TRIGGER_1
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5F30519D
+P 9250 2500
+F 0 "J?" H 9168 2717 50  0000 C CNN
+F 1 "MOLEX 2 PIN" H 9168 2626 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 9250 2500 50  0001 C CNN
+F 3 "~" H 9250 2500 50  0001 C CNN
+	1    9250 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F3051A3
+P 8950 2700
+AR Path="/5EE0E42E/5F3051A3" Ref="#PWR?"  Part="1" 
+AR Path="/5F3051A3" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 8950 2450 50  0001 C CNN
+F 1 "GND" H 8955 2527 50  0000 C CNN
+F 2 "" H 8950 2700 50  0001 C CNN
+F 3 "" H 8950 2700 50  0001 C CNN
+	1    8950 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 2600 8950 2600
+Wire Wire Line
+	8950 2600 8950 2700
+Wire Wire Line
+	9050 2500 8700 2500
+Text GLabel 8700 2500 0    50   Output ~ 0
+CV_OUT_1
+$Comp
+L Connector_Generic:Conn_01x08 J?
+U 1 1 5F31464B
+P 9250 5650
+F 0 "J?" H 9150 6200 50  0000 C CNN
+F 1 "MOLEX 8 PIN" H 9150 6100 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-08A_1x08_P2.54mm_Vertical" H 9250 5650 50  0001 C CNN
+F 3 "~" H 9250 5650 50  0001 C CNN
+	1    9250 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F314651
+P 8950 6150
+AR Path="/5EE0E42E/5F314651" Ref="#PWR?"  Part="1" 
+AR Path="/5F314651" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 8950 5900 50  0001 C CNN
+F 1 "GND" H 8955 5977 50  0000 C CNN
+F 2 "" H 8950 6150 50  0001 C CNN
+F 3 "" H 8950 6150 50  0001 C CNN
+	1    8950 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 6050 8950 6050
+Wire Wire Line
+	8950 6050 8950 6150
+Wire Wire Line
+	9050 5350 8700 5350
+Text GLabel 1225 1825 0    50   Output ~ 0
+SCALE_1
+Text GLabel 1225 3625 0    50   Output ~ 0
+BANK_1
+Text Notes 8100 1800 2    50   ~ 0
+to dac/ino CV IN A
+Text Notes 8100 2500 2    50   ~ 0
+to dac/ino CV IN B
+Text Notes 8200 3200 2    50   ~ 0
+to dac/ino GATE IN A
+Text Notes 10200 1800 2    50   ~ 0
+to dac/ino GATE IN B
+Text Notes 10150 2550 2    50   ~ 0
+to dac/ino CV OUT A
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5F34EDF2
+P 7250 3850
+F 0 "J?" H 7168 4067 50  0000 C CNN
+F 1 "MOLEX 2 PIN" H 7168 3976 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 7250 3850 50  0001 C CNN
+F 3 "~" H 7250 3850 50  0001 C CNN
+	1    7250 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F34EDF8
+P 6950 4050
+AR Path="/5EE0E42E/5F34EDF8" Ref="#PWR?"  Part="1" 
+AR Path="/5F34EDF8" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 6950 3800 50  0001 C CNN
+F 1 "GND" H 6955 3877 50  0000 C CNN
+F 2 "" H 6950 4050 50  0001 C CNN
+F 3 "" H 6950 4050 50  0001 C CNN
+	1    6950 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 3950 6950 3950
+Wire Wire Line
+	6950 3950 6950 4050
+Wire Wire Line
+	7050 3850 6700 3850
+Text GLabel 6700 3850 0    50   Input ~ 0
+CV1_2
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5F34EE02
+P 7250 4550
+F 0 "J?" H 7168 4767 50  0000 C CNN
+F 1 "MOLEX 2 PIN" H 7168 4676 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 7250 4550 50  0001 C CNN
+F 3 "~" H 7250 4550 50  0001 C CNN
+	1    7250 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F34EE08
+P 6950 4750
+AR Path="/5EE0E42E/5F34EE08" Ref="#PWR?"  Part="1" 
+AR Path="/5F34EE08" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 6950 4500 50  0001 C CNN
+F 1 "GND" H 6955 4577 50  0000 C CNN
+F 2 "" H 6950 4750 50  0001 C CNN
+F 3 "" H 6950 4750 50  0001 C CNN
+	1    6950 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 4650 6950 4650
+Wire Wire Line
+	6950 4650 6950 4750
+Wire Wire Line
+	7050 4550 6700 4550
+Text GLabel 6700 4550 0    50   Input ~ 0
+CV2_2
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5F34EE12
+P 7250 5250
+F 0 "J?" H 7168 5467 50  0000 C CNN
+F 1 "MOLEX 2 PIN" H 7168 5376 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 7250 5250 50  0001 C CNN
+F 3 "~" H 7250 5250 50  0001 C CNN
+	1    7250 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F34EE18
+P 6950 5450
+AR Path="/5EE0E42E/5F34EE18" Ref="#PWR?"  Part="1" 
+AR Path="/5F34EE18" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 6950 5200 50  0001 C CNN
+F 1 "GND" H 6955 5277 50  0000 C CNN
+F 2 "" H 6950 5450 50  0001 C CNN
+F 3 "" H 6950 5450 50  0001 C CNN
+	1    6950 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 5350 6950 5350
+Wire Wire Line
+	6950 5350 6950 5450
+Wire Wire Line
+	7050 5250 6700 5250
+Text GLabel 6700 5250 0    50   Input ~ 0
+QUANTIZE_2
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5F34EE22
+P 9250 3850
+F 0 "J?" H 9168 4067 50  0000 C CNN
+F 1 "MOLEX 2 PIN" H 9168 3976 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 9250 3850 50  0001 C CNN
+F 3 "~" H 9250 3850 50  0001 C CNN
+	1    9250 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F34EE28
+P 8950 4050
+AR Path="/5EE0E42E/5F34EE28" Ref="#PWR?"  Part="1" 
+AR Path="/5F34EE28" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 8950 3800 50  0001 C CNN
+F 1 "GND" H 8955 3877 50  0000 C CNN
+F 2 "" H 8950 4050 50  0001 C CNN
+F 3 "" H 8950 4050 50  0001 C CNN
+	1    8950 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 3950 8950 3950
+Wire Wire Line
+	8950 3950 8950 4050
+Wire Wire Line
+	9050 3850 8700 3850
+Text GLabel 8700 3850 0    50   Input ~ 0
+TRIGGER_2
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5F34EE32
+P 9250 4600
+F 0 "J?" H 9168 4817 50  0000 C CNN
+F 1 "MOLEX 2 PIN" H 9168 4726 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 9250 4600 50  0001 C CNN
+F 3 "~" H 9250 4600 50  0001 C CNN
+	1    9250 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F34EE38
+P 8950 4800
+AR Path="/5EE0E42E/5F34EE38" Ref="#PWR?"  Part="1" 
+AR Path="/5F34EE38" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 8950 4550 50  0001 C CNN
+F 1 "GND" H 8955 4627 50  0000 C CNN
+F 2 "" H 8950 4800 50  0001 C CNN
+F 3 "" H 8950 4800 50  0001 C CNN
+	1    8950 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 4700 8950 4700
+Wire Wire Line
+	8950 4700 8950 4800
+Wire Wire Line
+	9050 4600 8700 4600
+Text GLabel 8700 4600 0    50   Output ~ 0
+CV_OUT_2
+Text Notes 8100 3900 2    50   ~ 0
+to dac/ino CV IN C
+Text Notes 8100 4600 2    50   ~ 0
+to dac/ino CV IN D
+Text Notes 8200 5300 2    50   ~ 0
+to dac/ino GATE IN C
+Text Notes 10200 3900 2    50   ~ 0
+to dac/ino GATE IN D
+Text Notes 10150 4650 2    50   ~ 0
+to dac/ino CV OUT B
+$Comp
+L power:VCC #PWR?
+U 1 1 5F3536F9
+P 8700 5350
+F 0 "#PWR?" H 8700 5200 50  0001 C CNN
+F 1 "VCC" H 8718 5477 50  0000 L CNN
+F 2 "" H 8700 5350 50  0001 C CNN
+F 3 "" H 8700 5350 50  0001 C CNN
+	1    8700 5350
+	1    0    0    -1  
+$EndComp
+Text GLabel 9050 5450 0    50   Input ~ 0
+SCALE_1
+Text GLabel 9050 5550 0    50   Input ~ 0
+BANK_1
+Text GLabel 9050 5650 0    50   Input ~ 0
+SCALE_2
+Text GLabel 9050 5750 0    50   Input ~ 0
+BANK_2
+NoConn ~ 9050 5850
+NoConn ~ 9050 5950
+Wire Notes Line
+	500  7700 5950 7700
+Wire Notes Line
+	5950 600  500  600 
+Wire Notes Line
+	500  600  500  7700
+Wire Notes Line
+	5950 600  5950 7700
+Text Notes 4450 850  2    100  ~ 0
+Unit 1 controls and jacks — Duplicate for unit 2
+Wire Notes Line
+	6000 1150 6000 6450
+Wire Notes Line
+	6000 6450 10500 6450
+Wire Notes Line
+	10500 6450 10500 1150
+Wire Notes Line
+	10500 1150 6000 1150
+Text Notes 7500 1400 2    100  ~ 0
+Molex connectors
+Text Notes 9400 5700 0    50   ~ 0
+to dac/ino 8 pin \nMolex header
+NoConn ~ 2225 3725
+NoConn ~ 2225 3825
+NoConn ~ 2225 3925
+NoConn ~ 2225 4025
+NoConn ~ 2225 4125
+NoConn ~ 2225 4225
+$Comp
+L power:VCC #PWR?
+U 1 1 5F2B7D7B
+P 2200 5650
+F 0 "#PWR?" H 2200 5500 50  0001 C CNN
+F 1 "VCC" H 2218 5777 50  0000 L CNN
+F 2 "" H 2200 5650 50  0001 C CNN
+F 3 "" H 2200 5650 50  0001 C CNN
+	1    2200 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 5650 2200 5650
+Wire Wire Line
+	2100 6750 2200 6750
+Wire Wire Line
+	4850 4850 4950 4850
+$EndSCHEMATC
