@@ -1,7 +1,7 @@
 # QuantizerModule
 Code and hardware for Kosmo/Eurorack quantizer module
 
-This is a dual quantizer based on the [dac/ino](https://github.com/holmesrichards/dac_ino) board. As such it uses the dac_ino library as well as the Quantizer library in this repository.
+This is a dual quantizer based on the [dac/ino](https://github.com/holmesrichards/dac_ino) board. As such it uses the dac\_ino library as well as the Quantizer library in this repository. 
 
 Design is for Kosmo format module but the PCB and code would work equally well for a Eurorack version if the board were mounted perpendicular to the panel. It would just need a smaller front panel. Likewise with perpendicular mounting it could be a smaller single Kosmo quantizer.
 
@@ -30,6 +30,9 @@ The rotary switches are used to select a bank of scales and a scale within that 
 
 ## Building
 For build notes see [here](docs/BUILD.md).
+
+## Credits
+The Quantizer library and the table building script are based on work by Brendon Cassidy, see https://github.com/bpcmusic/telex and https://github.com/bpcmusic/telex_scales .
 
 ![](docs/quantizer.jpg)
 
