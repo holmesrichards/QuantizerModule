@@ -35,4 +35,5 @@ For build notes see [here](docs/BUILD.md).
 The Quantizer library and the table building script are based on work by Brendon Cassidy, see https://github.com/bpcmusic/telex and https://github.com/bpcmusic/telex_scales .
 
 ![](docs/quantizer.jpg)
+![](docs/quantizer_back.jpg)
 
