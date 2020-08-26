@@ -26,7 +26,7 @@ Analog:
 ## Banks and scales (as provided, but can be reprogrammed)
 
 - Bank 1 [0 array index]: Top twelve. (Note a few of these duplicate later entries. However only the index is duplicated; the scales themselves are stored only once.)
-  1. Chromatic
+  1. Chromatic C C# D Eb E F F# G G# A Bb B
   2. Major C D E F G A B 
   3. Natural minor C D Eb F G Ab Bb 
   4. Harmonic minor C D Eb F G Ab B 

@@ -109,7 +109,7 @@ def onescale(item, scalenum, outputhandle, notecounter):
     period = 1200.0
 
     if "#" in item:
-        items = item.split ("#")
+        items = item.split ("#", 1)
         description = items[1]
         item = items[0]
     
@@ -283,7 +283,7 @@ with open(outputfilepath, "w") as outputfile:
                 print item
                 description = ""
                 if "#" in item:
-                    items = item.split ("#")
+                    items = item.split ("#", 1)
                     description = items[1]
                     item = items[0]
                 items = item.split ()

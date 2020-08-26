@@ -853,9 +853,9 @@ Text Notes 8100 1800 2    50   ~ 0
 to dac/ino CV IN A
 Text Notes 8100 2500 2    50   ~ 0
 to dac/ino CV IN B
-Text Notes 8200 3200 2    50   ~ 0
-to dac/ino GATE IN A
 Text Notes 10200 1800 2    50   ~ 0
+to dac/ino GATE IN A
+Text Notes 10200 3900 2    50   ~ 0
 to dac/ino GATE IN B
 Text Notes 10150 2550 2    50   ~ 0
 to dac/ino CV OUT A
@@ -1023,9 +1023,9 @@ Text Notes 8100 3900 2    50   ~ 0
 to dac/ino CV IN C
 Text Notes 8100 4600 2    50   ~ 0
 to dac/ino CV IN D
-Text Notes 8200 5300 2    50   ~ 0
+Text Notes 8200 3200 2    50   ~ 0
 to dac/ino GATE IN C
-Text Notes 10200 3900 2    50   ~ 0
+Text Notes 8200 5300 2    50   ~ 0
 to dac/ino GATE IN D
 Text Notes 10150 4650 2    50   ~ 0
 to dac/ino CV OUT B

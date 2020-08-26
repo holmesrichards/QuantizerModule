@@ -169,35 +169,35 @@ const int Quantizer::hints55[] = { 0,23,46,69,92,115 };
 // 56 | +e 24  |  24-equal or quarter tones
 const float Quantizer::scale56[] = { 0.0,34.125,68.25,102.375,136.5,170.625,204.75,238.875,273.0,307.125,341.25,375.375,409.5,443.625,477.75,511.875,546.0,580.125,614.25,648.375,682.5,716.625,750.75,784.875,819.0,853.125,887.25,921.375,955.5,989.625,1023.75,1057.875,1092.0,1126.125,1160.25,1194.375,1228.5,1262.625,1296.75,1330.875,1365.0,1399.125,1433.25,1467.375,1501.5,1535.625,1569.75,1603.875,1638.0,1672.125,1706.25,1740.375,1774.5,1808.625,1842.75,1876.875,1911.0,1945.125,1979.25,2013.375,2047.5,2081.625,2115.75,2149.875,2184.0,2218.125,2252.25,2286.375,2320.5,2354.625,2388.75,2422.875,2457.0,2491.125,2525.25,2559.375,2593.5,2627.625,2661.75,2695.875,2730.0,2764.125,2798.25,2832.375,2866.5,2900.625,2934.75,2968.875,3003.0,3037.125,3071.25,3105.375,3139.5,3173.625,3207.75,3241.875,3276.0,3310.125,3344.25,3378.375,3412.5,3446.625,3480.75,3514.875,3549.0,3583.125,3617.25,3651.375,3685.5,3719.625,3753.75,3787.875,3822.0,3856.125,3890.25,3924.375,3958.5,3992.625,4026.75,4060.875,4095.0 };
 const int Quantizer::hints56[] = { 0,24,48,72,96,120 };
-// 57 | +e 12 2 4 5 7 9 11  | major
-const float Quantizer::scale57[] = { -68.25,136.5,273.0,341.25,477.75,614.25,750.75,955.5,1092.0,1160.25,1296.75,1433.25,1569.75,1774.5,1911.0,1979.25,2115.75,2252.25,2388.75,2593.5,2730.0,2798.25,2934.75,3071.25,3207.75,3412.5,3549.0,3617.25,3753.75,3890.25,4026.75,4231.5 };
-const int Quantizer::hints57[] = { 0,7,13,19,25,31 };
-// 58 | +e 12 2 3 5 7 8 10  | natural minor
-const float Quantizer::scale58[] = { -136.5,136.5,204.75,341.25,477.75,546.0,682.5,955.5,1023.75,1160.25,1296.75,1365.0,1501.5,1774.5,1842.75,1979.25,2115.75,2184.0,2320.5,2593.5,2661.75,2798.25,2934.75,3003.0,3139.5,3412.5,3480.75,3617.25,3753.75,3822.0,3958.5,4231.5 };
-const int Quantizer::hints58[] = { 0,7,13,19,25,31 };
-// 59 | +e 12 2 3 5 7 8 11  | harmonic minor
-const float Quantizer::scale59[] = { -68.25,136.5,204.75,341.25,477.75,546.0,750.75,955.5,1023.75,1160.25,1296.75,1365.0,1569.75,1774.5,1842.75,1979.25,2115.75,2184.0,2388.75,2593.5,2661.75,2798.25,2934.75,3003.0,3207.75,3412.5,3480.75,3617.25,3753.75,3822.0,4026.75,4231.5 };
-const int Quantizer::hints59[] = { 0,7,13,19,25,31 };
-// 60 | +e 12 2 4 7 9   | major pentatonic
-const float Quantizer::scale60[] = { -204.75,136.5,273.0,477.75,614.25,955.5,1092.0,1296.75,1433.25,1774.5,1911.0,2115.75,2252.25,2593.5,2730.0,2934.75,3071.25,3412.5,3549.0,3753.75,3890.25,4231.5 };
-const int Quantizer::hints60[] = { 0,5,9,13,17,21 };
-// 61 | +e 12 3 5 7 10  | minor pentatonic
-const float Quantizer::scale61[] = { -136.5,204.75,341.25,477.75,682.5,1023.75,1160.25,1296.75,1501.5,1842.75,1979.25,2115.75,2320.5,2661.75,2798.25,2934.75,3139.5,3480.75,3617.25,3753.75,3958.5,4299.75 };
-const int Quantizer::hints61[] = { 0,5,9,13,17,21 };
-// 62 | +e 12 3 5 6 7 10  | hexatonic blues
-const float Quantizer::scale62[] = { -136.5,204.75,341.25,409.5,477.75,682.5,1023.75,1160.25,1228.5,1296.75,1501.5,1842.75,1979.25,2047.5,2115.75,2320.5,2661.75,2798.25,2866.5,2934.75,3139.5,3480.75,3617.25,3685.5,3753.75,3958.5,4299.75 };
-const int Quantizer::hints62[] = { 0,6,11,16,21,26 };
-// 63 | +e 12 4 7  |  major triad
-const float Quantizer::scale63[] = { -341.25,273.0,477.75,1092.0,1296.75,1911.0,2115.75,2730.0,2934.75,3549.0,3753.75,4368.0 };
-const int Quantizer::hints63[] = { 0,3,5,7,9,11 };
-// 64 | +e 12 3 7  |  minor triad
-const float Quantizer::scale64[] = { -341.25,204.75,477.75,1023.75,1296.75,1842.75,2115.75,2661.75,2934.75,3480.75,3753.75,4299.75 };
-const int Quantizer::hints64[] = { 0,3,5,7,9,11 };
-// 65 | +e 12 4 7 10  |  dominant seventh
-const float Quantizer::scale65[] = { -136.5,273.0,477.75,682.5,1092.0,1296.75,1501.5,1911.0,2115.75,2320.5,2730.0,2934.75,3139.5,3549.0,3753.75,3958.5,4368.0 };
-const int Quantizer::hints65[] = { 0,4,7,10,13,16 };
+// 57 | +e 12 0 2 4 5 7 9 11  | major
+const float Quantizer::scale57[] = { 0.0,136.5,273.0,341.25,477.75,614.25,750.75,819.0,955.5,1092.0,1160.25,1296.75,1433.25,1569.75,1638.0,1774.5,1911.0,1979.25,2115.75,2252.25,2388.75,2457.0,2593.5,2730.0,2798.25,2934.75,3071.25,3207.75,3276.0,3412.5,3549.0,3617.25,3753.75,3890.25,4026.75,4095.0 };
+const int Quantizer::hints57[] = { 0,7,14,21,28,35 };
+// 58 | +e 12 0 2 3 5 7 8 10  | natural minor
+const float Quantizer::scale58[] = { 0.0,136.5,204.75,341.25,477.75,546.0,682.5,819.0,955.5,1023.75,1160.25,1296.75,1365.0,1501.5,1638.0,1774.5,1842.75,1979.25,2115.75,2184.0,2320.5,2457.0,2593.5,2661.75,2798.25,2934.75,3003.0,3139.5,3276.0,3412.5,3480.75,3617.25,3753.75,3822.0,3958.5,4095.0 };
+const int Quantizer::hints58[] = { 0,7,14,21,28,35 };
+// 59 | +e 12 0 2 3 5 7 8 11  | harmonic minor
+const float Quantizer::scale59[] = { 0.0,136.5,204.75,341.25,477.75,546.0,750.75,819.0,955.5,1023.75,1160.25,1296.75,1365.0,1569.75,1638.0,1774.5,1842.75,1979.25,2115.75,2184.0,2388.75,2457.0,2593.5,2661.75,2798.25,2934.75,3003.0,3207.75,3276.0,3412.5,3480.75,3617.25,3753.75,3822.0,4026.75,4095.0 };
+const int Quantizer::hints59[] = { 0,7,14,21,28,35 };
+// 60 | +e 12 0 2 4 7 9   | major pentatonic
+const float Quantizer::scale60[] = { 0.0,136.5,273.0,477.75,614.25,819.0,955.5,1092.0,1296.75,1433.25,1638.0,1774.5,1911.0,2115.75,2252.25,2457.0,2593.5,2730.0,2934.75,3071.25,3276.0,3412.5,3549.0,3753.75,3890.25,4095.0 };
+const int Quantizer::hints60[] = { 0,5,10,15,20,25 };
+// 61 | +e 12 0 3 5 7 10  | minor pentatonic
+const float Quantizer::scale61[] = { 0.0,204.75,341.25,477.75,682.5,819.0,1023.75,1160.25,1296.75,1501.5,1638.0,1842.75,1979.25,2115.75,2320.5,2457.0,2661.75,2798.25,2934.75,3139.5,3276.0,3480.75,3617.25,3753.75,3958.5,4095.0 };
+const int Quantizer::hints61[] = { 0,5,10,15,20,25 };
+// 62 | +e 12 0 3 5 6 7 10  | hexatonic blues
+const float Quantizer::scale62[] = { 0.0,204.75,341.25,409.5,477.75,682.5,819.0,1023.75,1160.25,1228.5,1296.75,1501.5,1638.0,1842.75,1979.25,2047.5,2115.75,2320.5,2457.0,2661.75,2798.25,2866.5,2934.75,3139.5,3276.0,3480.75,3617.25,3685.5,3753.75,3958.5,4095.0 };
+const int Quantizer::hints62[] = { 0,6,12,18,24,30 };
+// 63 | +e 12 0 4 7  |  major triad
+const float Quantizer::scale63[] = { 0.0,273.0,477.75,819.0,1092.0,1296.75,1638.0,1911.0,2115.75,2457.0,2730.0,2934.75,3276.0,3549.0,3753.75,4095.0 };
+const int Quantizer::hints63[] = { 0,3,6,9,12,15 };
+// 64 | +e 12 0 3 7  |  minor triad
+const float Quantizer::scale64[] = { 0.0,204.75,477.75,819.0,1023.75,1296.75,1638.0,1842.75,2115.75,2457.0,2661.75,2934.75,3276.0,3480.75,3753.75,4095.0 };
+const int Quantizer::hints64[] = { 0,3,6,9,12,15 };
+// 65 | +e 12 0 4 7 10  |  dominant seventh
+const float Quantizer::scale65[] = { 0.0,273.0,477.75,682.5,819.0,1092.0,1296.75,1501.5,1638.0,1911.0,2115.75,2320.5,2457.0,2730.0,2934.75,3139.5,3276.0,3549.0,3753.75,3958.5,4095.0 };
+const int Quantizer::hints65[] = { 0,4,8,12,16,20 };
 
-const int Quantizer::notecount[] = { 61,36,61,36,66,216,26,36,61,86,26,36,61,96,156,26,36,61,96,26,36,61,61,61,61,61,61,61,61,61,61,61,61,61,6,11,16,21,26,31,36,41,46,51,56,66,71,76,81,86,91,96,101,106,111,116,121,32,32,32,22,22,27,12,12,17 };
+const int Quantizer::notecount[] = { 61,36,61,36,66,216,26,36,61,86,26,36,61,96,156,26,36,61,96,26,36,61,61,61,61,61,61,61,61,61,61,61,61,61,6,11,16,21,26,31,36,41,46,51,56,66,71,76,81,86,91,96,101,106,111,116,121,36,36,36,26,26,31,16,16,21 };
 
 const float *Quantizer::scales[] = { scale0,scale1,scale2,scale3,scale4,scale5,scale6,scale7,scale8,scale9,scale10,scale11,scale12,scale13,scale14,scale15,scale16,scale17,scale18,scale19,scale20,scale21,scale22,scale23,scale24,scale25,scale26,scale27,scale28,scale29,scale30,scale31,scale32,scale33,scale34,scale35,scale36,scale37,scale38,scale39,scale40,scale41,scale42,scale43,scale44,scale45,scale46,scale47,scale48,scale49,scale50,scale51,scale52,scale53,scale54,scale55,scale56,scale57,scale58,scale59,scale60,scale61,scale62,scale63,scale64,scale65 };
 const int *Quantizer::hints[] = { hints0,hints1,hints2,hints3,hints4,hints5,hints6,hints7,hints8,hints9,hints10,hints11,hints12,hints13,hints14,hints15,hints16,hints17,hints18,hints19,hints20,hints21,hints22,hints23,hints24,hints25,hints26,hints27,hints28,hints29,hints30,hints31,hints32,hints33,hints34,hints35,hints36,hints37,hints38,hints39,hints40,hints41,hints42,hints43,hints44,hints45,hints46,hints47,hints48,hints49,hints50,hints51,hints52,hints53,hints54,hints55,hints56,hints57,hints58,hints59,hints60,hints61,hints62,hints63,hints64,hints65 };
@@ -332,21 +332,21 @@ static const float PROGMEM scale55[116];
 static const int PROGMEM hints55[116];
 static const float PROGMEM scale56[121];
 static const int PROGMEM hints56[121];
-static const float PROGMEM scale57[32];
-static const int PROGMEM hints57[32];
-static const float PROGMEM scale58[32];
-static const int PROGMEM hints58[32];
-static const float PROGMEM scale59[32];
-static const int PROGMEM hints59[32];
-static const float PROGMEM scale60[22];
-static const int PROGMEM hints60[22];
-static const float PROGMEM scale61[22];
-static const int PROGMEM hints61[22];
-static const float PROGMEM scale62[27];
-static const int PROGMEM hints62[27];
-static const float PROGMEM scale63[12];
-static const int PROGMEM hints63[12];
-static const float PROGMEM scale64[12];
-static const int PROGMEM hints64[12];
-static const float PROGMEM scale65[17];
-static const int PROGMEM hints65[17];
+static const float PROGMEM scale57[36];
+static const int PROGMEM hints57[36];
+static const float PROGMEM scale58[36];
+static const int PROGMEM hints58[36];
+static const float PROGMEM scale59[36];
+static const int PROGMEM hints59[36];
+static const float PROGMEM scale60[26];
+static const int PROGMEM hints60[26];
+static const float PROGMEM scale61[26];
+static const int PROGMEM hints61[26];
+static const float PROGMEM scale62[31];
+static const int PROGMEM hints62[31];
+static const float PROGMEM scale63[16];
+static const int PROGMEM hints63[16];
+static const float PROGMEM scale64[16];
+static const int PROGMEM hints64[16];
+static const float PROGMEM scale65[21];
+static const int PROGMEM hints65[21];

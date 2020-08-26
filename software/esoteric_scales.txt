@@ -65,15 +65,15 @@ scl/young2.scl
 +e 24 # 24-equal or quarter tones
 +b 1 # Top Twelve
 +s 2
-+e 12 2 4 5 7 9 11 #major
-+e 12 2 3 5 7 8 10 #natural minor
-+e 12 2 3 5 7 8 11 #harmonic minor
-+e 12 2 4 7 9  #major pentatonic
-+e 12 3 5 7 10 #minor pentatonic
-+e 12 3 5 6 7 10 #hexatonic blues
++e 12 0 2 4 5 7 9 11 #major
++e 12 0 2 3 5 7 8 10 #natural minor
++e 12 0 2 3 5 7 8 11 #harmonic minor
++e 12 0 2 4 7 9  #major pentatonic
++e 12 0 3 5 7 10 #minor pentatonic
++e 12 0 3 5 6 7 10 #hexatonic blues
 +d 5 6 1 8
 +s 9
-+e 12 4 7 # major triad
-+e 12 3 7 # minor triad
-+e 12 4 7 10 # dominant seventh
++e 12 0 4 7 # major triad
++e 12 0 3 7 # minor triad
++e 12 0 4 7 10 # dominant seventh
 +d 5 4 1 12

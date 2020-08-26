@@ -154,31 +154,32 @@ void loop()
 	  // which happens if [we've input a gate or there's
 	  // nothing plugged into the gate], and [the toggle switch
 	  // is on]
-	  if (qgate[iq])
-	    cvq = q[iq].Quantize(cv[iq]).Value + cv2[iq];
-	  else
-	    cvq = cv[iq] + cv2[iq];
-      
-	  // Send it out
-	  dac_inoBoard.writeCV(cvOutChan[iq], cvq);
+    int qq = qgate[iq] ? q[iq].Quantize(cv[iq]).Value : cv[iq];
+    if (qq >= 0 && qq <= 4095)
+    {
+	    cvq = qq + cv2[iq];
+      // Send it out
+	    dac_inoBoard.writeCV(cvOutChan[iq], cvq);
+    
 #if DEBUG
-	  if (abs(int(cv[iq])-int(cvold[iq])) > 10 || abs(int(cv2[iq])-int(cv2old[iq])) > 10
-	  || bank[iq] != bankold[iq] || scale[iq] != scaleold[iq])
-	    {
-	      Serial.print ("Quantizer "); Serial.print (iq);
-	      Serial.print (" CV1 in = "); Serial.print (cv[iq]);
-	      Serial.print (" bank "); Serial.print (bank[iq]);
-	      Serial.print (" scale "); Serial.print (scale[iq]);
-        Serial.print (" quantize "); Serial.print (qgate[iq]);
-	      Serial.print (" CV2 in = "); Serial.print (cv2[iq]);
-	      Serial.print (" CV out = "); Serial.println (cvq);
+  	  if (abs(int(cv[iq])-int(cvold[iq])) > 10 || abs(int(cv2[iq])-int(cv2old[iq])) > 10
+  	  || bank[iq] != bankold[iq] || scale[iq] != scaleold[iq])
+  	    {
+  	      Serial.print ("Quantizer "); Serial.print (iq);
+  	      Serial.print (" CV1 in = "); Serial.print (cv[iq]);
+  	      Serial.print (" bank "); Serial.print (bank[iq]);
+  	      Serial.print (" scale "); Serial.print (scale[iq]);
+          Serial.print (" quantize "); Serial.print (qgate[iq]);
+	        Serial.print (" CV2 in = "); Serial.print (cv2[iq]);
+	        Serial.print (" CV out = "); Serial.println (cvq);
 
-	      cvold[iq] = cv[iq];
-        cv2old[iq] = cv2[iq];
-        bankold[iq] = bank[iq];
-        scaleold[iq] = scale[iq];
-	    }
+	        cvold[iq] = cv[iq];
+          cv2old[iq] = cv2[iq];
+          bankold[iq] = bank[iq];
+          scaleold[iq] = scale[iq];
+	      }
 #endif
+    }
 	}
       triggered[iq] = false;
     } // end loop over quantizers
