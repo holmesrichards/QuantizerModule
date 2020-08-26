@@ -54,7 +54,7 @@ for Bohlen-Pierce equal temperament.
 ## Table generation
 Once you have your description file, feed it to table\_builder.py:
 
-    ./table\_builder -i <path>;
+    ./table_builder -i <path>;
 
 where &lt;path&gt; is the file path to your description file. Assuming there are no errors, the script will create an output file with the same name but file extension .cpp, containing some c++ code.
 
