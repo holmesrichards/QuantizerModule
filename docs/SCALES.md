@@ -18,6 +18,7 @@ There are two sets of scales provided in the software. The "Common Scales" set i
 <li>Minor triad: C Eb G</li>
 <li>Dominant seventh: C E G Bb</li>
 <li>Diminished seventh: C Eb Gb A</li>
+</ol>
 </li><br>
 <li> Bank 2: Diatonic (major/natural minor) scales
 <ol type="1">
