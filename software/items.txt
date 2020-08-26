@@ -1,2 +1,0 @@
-+e 12
-scl/pyth_12.scl

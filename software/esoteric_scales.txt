@@ -1,0 +1,79 @@
++b 1 # Top Twelve
++e 12 # 12-equal chromatic
++b 2 # Just/Pythagorean
+scl/ptolemy.scl
+scl/duodene.scl
+myscl/RSH-5limitdiamond.scl
+myscl/RSH-7limitdiamond.scl
+scl/partch_43.scl
++s 9
++g 5 3/2 # pythagorean pentatonic
++g 7 3/2 # pythagorean diatonic
++g 12 3/2 # pythagorean chromatic
++g 17 3/2 # pythagorean 17 notes
++b 3 # Meantone
++g 5 696.5784285 # quarter comma pentatonic
++g 7 696.5784285 # quarter comma diatonic
++g 12 696.5784285 # quarter comma chromatic
++g 19 696.5784285 # quarter comma 19 notes
++g 31 696.5784285 # quarter comma 31 notes or 31-equal (nearly)
++g 5 694.7862377 # one third comma pentatonic
++g 7 694.7862377 # one third comma diatonic
++g 12 694.7862377 # one third comma chromatic
++g 19 694.7862377 # one third comma 19 notes or 19-equal (nearly)
++g 5 695.8103467 # two sevenths comma pentatonic
++g 7 695.8103467 # two sevenths comma diatonic
++g 12 695.8103467 # two sevenths comma chromatic
++b 4 # Well temperaments
+scl/werck3.scl
+scl/werck4.scl
+scl/werck5.scl
+scl/werck6.scl
+scl/neidhardt1.scl
+scl/neidhardt2.scl
+scl/neidhardt3.scl
+scl/kirnberger2.scl
+scl/kirnberger3.scl
+scl/vallotti2.scl
+scl/young1.scl
+scl/young2.scl
++b 5 # Macrotonal (and 12-note) equal divisions
++e 1 # 1-equal or octaves
++e 2 # 2-equal or tritones
++e 3 # 3-equal or major thirds or augmented triad
++e 4 # 4-equal or minor thirds or diminished seventh
++e 5 # 5-equal
++e 6 # 6-equal or whole tones
++e 7 # 7-equal
++e 8 # 8-equal
++e 9 # 9-equal
++e 10 # 10-equal
++e 11 # 11-equal
++d 1 1 5 12
++b 6 # Microtonal equal divisions
++e 13 # 13-equal
++e 14 # 14-equal
++e 15 # 15-equal
++e 16 # 16-equal
++e 17 # 17-equal
++e 18 # 18-equal
++e 19 # 19-equal
++e 20 # 20-equal
++e 21 # 21-equal
++e 22 # 22-equal
++e 23 # 23-equal
++e 24 # 24-equal or quarter tones
++b 1 # Top Twelve
++s 2
++e 12 2 4 5 7 9 11 #major
++e 12 2 3 5 7 8 10 #natural minor
++e 12 2 3 5 7 8 11 #harmonic minor
++e 12 2 4 7 9  #major pentatonic
++e 12 3 5 7 10 #minor pentatonic
++e 12 3 5 6 7 10 #hexatonic blues
++d 5 6 1 8
++s 9
++e 12 4 7 # major triad
++e 12 3 7 # minor triad
++e 12 4 7 10 # dominant seventh
++d 5 4 1 12

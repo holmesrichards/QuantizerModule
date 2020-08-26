@@ -1,0 +1,81 @@
++b 1 # Top Twelve
++e 12 # 12-equal chromatic
++e 12 0 2 4 5 7 9 11 #major
++e 12 0 2 3 5 7 8 10 #natural minor
++e 12 0 2 3 5 7 8 11 #harmonic minor
++e 12 0 2 4 7 9  #major pentatonic
++e 12 0 3 5 7 10 #minor pentatonic
++e 12 0 3 5 6 7 10 #hexatonic blues
++e 6 # 6-equal or whole tones
++e 12 0 4 7 # major triad
++e 12 0 3 7 # minor triad
++e 12 0 4 7 10 # dominant seventh
++e 12 0 3 5 9 # diminished seventh
++b 2 # Diatonic
++d 1 2 2 1                  #C  major / A  natural minor
++s 2
++e 12  1  3  5  6  8 10  0  #C# major / Bb natural minor
++e 12  2  4  6  7  9 11  1  #D  major / B  natural minor
++e 12  3  5  7  8 10  0  2  #Eb major / C  natural minor
++e 12  4  6  8  9 11  1  3  #E  major / C# natural minor
++e 12  5  7  9 10  0  2  4  #F  major / D  natural minor
++e 12  6  8 10 11  1  3  5  #F# major / Eb natural minor
++e 12  7  9 11  0  2  4  6  #G  major / E  natural minor
++e 12  8 10  0  1  3  5  7  #G# major / F  natural minor
++e 12  9 11  1  2  4  6  8  #A  major / F# natural minor
++e 12 10  0  2  3  5  7  9  #Bb major / G  natural minor
++e 12 11  1  3  4  6  8 10  #B  major / G# natural minor
++b 3 # Harmonic minor
++d 1 4 3 1                  #C  harmonic minor
++s 2
++e 12  1  3  4  6  8  9  0  #C# harmonic minor
++e 12  2  4  5  7  9 10  1  #D  harmonic minor
++e 12  3  5  6  8 10 11  2  #Eb harmonic minor
++e 12  4  6  7  9 11  0  3  #E  harmonic minor
++e 12  5  7  8 10  0  1  4  #F  harmonic minor
++e 12  6  8  9 11  1  2  5  #F# harmonic minor
++e 12  7  9 10  0  2  3  6  #G  harmonic minor
++e 12  8 10 11  1  3  4  7  #G# harmonic minor
++e 12  9 11  0  2  4  5  8  #A  harmonic minor 
++e 12 10  0  1  3  5  6  9  #Bb harmonic minor
++e 12 11  1  2  4  6  7 10  #B  harmonic minor
++b 4 # Melodic minor (ascending/jazz)
++e 12  0  2  3  5  7  9 11  #C  melodic minor
++e 12  1  3  4  6  8 10  0  #C# melodic minor
++e 12  2  4  5  7  9 11  1  #D  melodic minor
++e 12  3  5  6  8 10  0  2  #Eb melodic minor
++e 12  4  6  7  9 11  1  3  #E  melodic minor
++e 12  5  7  8 10  0  2  4  #F  melodic minor
++e 12  6  8  9 11  1  3  5  #F# melodic minor
++e 12  7  9 10  0  2  4  6  #G  melodic minor
++e 12  8 10 11  1  3  5  7  #G# melodic minor
++e 12  9 11  0  2  4  6  8  #A  melodic minor 
++e 12 10  0  1  3  5  7  9  #Bb melodic minor
++e 12 11  1  2  4  6  8 10  #B  melodic minor
++b 5 # Pentatonic
++d 1 5 5 1            #C  major / A minor pentatonic
++s 2
++e 12  1  3  5  8 10  #C# major / Bb minor pentatonic
++e 12  2  4  6  9 11  #D  major / B  minor pentatonic
++e 12  3  5  7 10  0  #Eb major / C  minor pentatonic
++e 12  4  6  8 11  1  #E  major / C# minor pentatonic
++e 12  5  7  9  0  2  #F  major / D  minor pentatonic
++e 12  6  8 10  1  3  #F# major / Eb minor pentatonic
++e 12  7  9 11  2  4  #G  major / E  minor pentatonic
++e 12  8 10  0  3  5  #G# major / F  minor pentatonic
++e 12  9 11  1  4  6  #A  major / F# minor pentatonic
++e 12 10  0  2  5  7  #Bb major / G  minor pentatonic
++e 12 11  1  3  6  8  #B  major / G# minor pentatonic
++b 6 # Hexatonic blues
++d 1 7 6 1               #C  blues
++e 12  1  4  6  7  8 11  #C# blues
++e 12  2  5  7  8  9  0  #D  blues
++e 12  3  6  8  9 10  1  #Eb blues
++e 12  4  7  9 10 11  2  #E  blues
++e 12  5  8 10 11  0  3  #F  blues
++e 12  6  9 11  0  1  4  #F# blues
++e 12  7 10  0  1  2  5  #G  blues
++e 12  8 11  1  2  3  6  #G# blues
++e 12  9  0  2  3  4  7  #A  blues
++e 12 10  1  3  4  5  8  #Bb blues
++e 12 11  2  4  5  6  9  #B  blues

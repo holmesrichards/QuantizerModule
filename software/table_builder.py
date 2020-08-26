@@ -36,7 +36,7 @@
 # Input file lines can be:
 # <path to scl file> [#description]
 # or
-# +g <n> <generator> [<period>] [#description]
+# +g <n> <generator> [<period>] [<firstnote>] [#description]
 # or
 # +e <n> [list of numbers] [#description]
 # or
@@ -45,16 +45,18 @@
 # Description if present in the first of these overrides the description in the file.
 #
 # Second of these means to generate a scale with n notes using
-# generator and period. E.g.:
+# generator and period starting from given firstnote . E.g.:
 #
-# +g 12 3/2 2/1
+# +g 12 3/2 2/1 500
 #
-# for a 12-tone Pythagorean scale. If the period is omitted, 2/1 is the default.
+# for a 12-tone Pythagorean scale. Parameters can be ratios or cents.
+# If the period is omitted, 2/1 is the default.
+# If firstnote is omitted, 0 is the default.
 #
 # Third means to generate a scale using the listed entries (indexed from 0) from
-# an n-equal division of the octave. 0 is always assumed. E.g.:
+# an n-equal division of the octave. 0 is NOT assumed. E.g.:
 #
-# +e 12 2 4 5 7 9 11
+# +e 12 0 2 4 5 7 9 11
 #
 # for a 12-equal major scale. If the list is omitted, the scale contains all
 # n notes.
@@ -64,16 +66,31 @@
 #
 # Script has minimal error checking so far!!
 
-import sys, getopt, math
+import sys, getopt, math, re
 
 DACTOP = 4095   # limit of DAC (2**12-1)
 DAC1   = 4095   # DAC counts corresponding to defined voltage
 V1     = 5.0    # voltage corresponding to DAC1
 DACPEROCTAVE  = (DAC1/V1)  # DAC counts per octave
 
+NBANK = 6  # number of banks
+NSCALE = 12  # number of scales per bank
+
 import sys, getopt, math
 
+def checkBS (b, s, item):
+    if b < 0 or b >= NBANK:
+        print "!!!!! For '"+item+"' bank", b+1, "out of range"
+        exit()
+    if s < 0 or s >= NSCALE:
+        print "!!!!! For '"+item+"' scale", s+1, "out of range"
+        exit()
+    return True
+
 def realOrRat (item):
+    # Return float(item) unless we think it's a representation of a rational,
+    # else compute the value of the rational, convert to cents, and
+    # return that
     if "/" in item:
         ratio = item.split("/")
 	value = float(ratio[0]) / float(ratio[1])
@@ -83,10 +100,11 @@ def realOrRat (item):
     return value
 
 def onescale(item, scalenum, outputhandle, notecounter):
+    # Generate one scale
     print item
     description = ""
     values = 0
-    scale = []
+    scale = [] # this will become a sorted list of all notes in one period
     generator = 0.0
     period = 1200.0
 
@@ -103,8 +121,12 @@ def onescale(item, scalenum, outputhandle, notecounter):
             period = realOrRat(items[3])
         else:
             period = 1200.0
-        value = generator
-        scale = [1200.0]
+        if len(items) > 4:
+            firstnote = realOrRat(items[4])
+        else:
+            firstnote = 0.0
+        value = firstnote
+        scale = []
         while len(scale) < n:
             while value > period:
                 value -= period
@@ -126,16 +148,15 @@ def onescale(item, scalenum, outputhandle, notecounter):
                 elist = [int(i) for i in items[3:]]
             else:
                 elist = range(0,n)
-
         
         cscale = [period/n*i for i in range (0, n)]
 
         scale = []
         for e in elist:
-            if not (cscale[e] == 0):
-                scale.append (cscale[e])
-        scale.append (period) 
+            scale.append (cscale[e])
+        scale.sort()
     else:
+        # Read Scala scale which always ends with period
         with open(item) as f:
             for line in f:
                 line = line.strip()
@@ -155,25 +176,47 @@ def onescale(item, scalenum, outputhandle, notecounter):
                     scale.append(value)
                 else:
                     scale.append(float(line))
-
+        period = scale[-1]
+        scale = [0] + scale[0:-1]
+        
     table = []
 
-    # assume that 0v is C0 and loop over the scale until we have exceeded DACTOP
+    print "period", period, "scale", scale
+    
+    # Make table of scale notes by looping over the scale in both directions
+    # with given period until we go below 0 and above DACTOP
     centstodac = DACPEROCTAVE / 1200.
     dacs = 0.
+
+    note = len(scale)-1
+    octave = -period
+    while True:
+	dacs = (scale[note] + octave) * centstodac
+	table.append(dacs)
+        if dacs <= 0:
+            break
+	note -= 1
+	if note < 0:
+	    octave -= period
+	    note = len(scale)-1
+
     note = 0
     octave = 0
-
-    table.append(dacs)
-
-    while dacs <= DACTOP:
-	dacs = (scale[note] * centstodac) + octave
+    while True:
+	dacs = (scale[note] + octave) * centstodac
 	table.append(dacs)
+        if dacs >= DACTOP:
+            break;
 	note += 1
 	if note >= len(scale):
-	    octave = dacs
+	    octave += period
 	    note = 0
 
+    while len(table) > 1 and table[1] <= 0:
+        table = table[1:]
+    while len(table) > 1 and table[len(table)-2] >= DACTOP:
+        table = table[:-2]
+        
     pitchCount = len(table)
     notecounter.append(pitchCount)
 
@@ -203,34 +246,37 @@ argv = sys.argv[1:]
 try:
     opts, args = getopt.getopt(argv,"i::",["input="])
 except getopt.GetoptError:
-    print "table_builder.py -i <inputfile>"
+    print "table_builder.py -i <inputfilepath>"
     sys.exit(2)
 
-inputfile = "items.txt"
+inputfilepath = "items.txt"
 
 notecounter = []
 scales = []
 hints = []
-nbank = 6  # number of banks
-nscale = 12  # number of scales per bank
-bankandscale = [[-1 for i in range(nscale)] for j in range(nbank)]
-lastscalesofar = [-1 for i in range(nbank)] # last scale index used so far in each bank
-bankdesc = ["" for i in range(nbank)]
+bankandscale = [[-1 for i in range(NSCALE)] for j in range(NBANK)]
+lastscalesofar = [-1 for i in range(NBANK)] # last scale index used so far in each bank
+bankdesc = ["" for i in range(NBANK)]
 
 for opt, arg in opts:
     if opt in ("-i", "--ifile"):
-        inputfile = arg
+        inputfilepath = arg
 
-if inputfile == "":
+if inputfilepath == "":
     sys.exit(2)
+
+outputfilepath = re.sub("\..*", "", inputfilepath);
+outputfilepath += ".cpp"
 
 i = 0
 curbank = 0  # index
 curscale = 0  # index
 
-with open("scales.cpp", "w") as outputfile:
-    with open(inputfile) as list:
-	for item in list:
+with open(outputfilepath, "w") as outputfile:
+    with open(inputfilepath) as inputfile:
+	for item in inputfile:
+            if item.startswith ("#"):
+                continue
 	    item = item.strip()
             # Check if it's a command rather than a scale definition
             if item.startswith ("+b") or item.startswith ("+s") or item.startswith ("+d"):
@@ -244,27 +290,31 @@ with open("scales.cpp", "w") as outputfile:
                 if items[0] == "+b":
                     # Change bank assignment for next scale
                     curbank = int(items[1]) - 1
-                    if not (description == ""):
-                        bankdesc[curbank] = description
-                    curscale = lastscalesofar[curbank] + 1
+                    if checkBS (curbank, 0, item):
+                        if not (description == ""):
+                            bankdesc[curbank] = description
+                        curscale = lastscalesofar[curbank] + 1
                 if items[0] == "+s":
                     # Change scale assignment for next scale
-                    curscale = int(items[1]) - 1
+                    if checkBS (0, curscale, item):
+                        curscale = int(items[1]) - 1
                 if items[0] == "+d":
                     # Duplicate a bank assignment
                     obank = int(items[1])-1
                     oscale = int(items[2])-1
                     dbank = int(items[3])-1
                     dscale = int(items[4])-1
-                    bankandscale[dbank][dscale] = bankandscale[obank][oscale]
-                    if dscale > lastscalesofar[dbank]:
-                        lastscalesofar[dbank] = dscale
+                    if checkBS (obank, oscale, item) and checkBS (dbank, dscale, item):
+                        bankandscale[dbank][dscale] = bankandscale[obank][oscale]
+                        if dscale > lastscalesofar[dbank]:
+                            lastscalesofar[dbank] = dscale
             else:
 	        onescale(item, i, outputfile, notecounter)
 	        scales.append('scale' + str(i))
 	        hints.append('hints' + str(i))
-                bankandscale[curbank][curscale] = i
-                curscale += 1
+                if checkBS (curbank, curscale, item):
+                    bankandscale[curbank][curscale] = i
+                    curscale += 1
 	        i += 1
 
     notelist = ','.join(map(str, notecounter))
@@ -279,13 +329,13 @@ with open("scales.cpp", "w") as outputfile:
     outputfile.write("const int *Quantizer::hints[] = { " + hints + " };" + "\n")
 
     outputfile.write("\n\n");
-    outputfile.write("const int Quantizer::bankandscale[" + str(nbank) + "][" + str(nscale) + "] = {\n")
-    for b in range (nbank):
+    outputfile.write("const int Quantizer::bankandscale[" + str(NBANK) + "][" + str(NSCALE) + "] = {\n")
+    for b in range (NBANK):
         outputfile.write ("  {")
-        for s in range (nscale-1):
+        for s in range (NSCALE-1):
             outputfile.write (" {:3d},".format(bankandscale[b][s]))
-        outputfile.write (" {:3d}".format(bankandscale[b][nscale-1]))
-        outputfile.write (" }" + ("," if b < nbank-1 else " "))
+        outputfile.write (" {:3d}".format(bankandscale[b][NSCALE-1]))
+        outputfile.write (" }" + ("," if b < NBANK-1 else " "))
         outputfile.write (" // {:2d}".format(b+1))
         if not bankdesc[b] == "":
             outputfile.write (" " + bankdesc[b])
