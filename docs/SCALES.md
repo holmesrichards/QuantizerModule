@@ -3,132 +3,153 @@
 There are two sets of scales provided in the software. The "Common Scales" set is enabled by default. Change the value of SCALESET in Quantize.h to get the "Esoteric Scales" set. To customize the scales see [change scale instructions](CHANGESCALES.md).
 
 ## Common Scales set
-- Bank 1 [0 array index]: Top twelve. (Note a few of these duplicate later entries. However, only the index is duplicated; the scales themselves are stored only once.)
-  1. Chromatic: C C# D Eb E F F# G G# A Bb B
-  2. Major: C D E F G A B 
-  3. Natural minor: C D Eb F G Ab Bb 
-  4. Harmonic minor: C D Eb F G Ab B 
-  5. Major pentatonic: C D E G A
-  6. Minor pentatonic: C Eb F G Bb
-  7. Hexatonic blues: C Eb F F# G Bb 
-  8. Whole tone: C D E F# G# A#
-  9. Major triad: C E G
-  10. Minor triad: C Eb G
-  11. Dominant seventh: C E G Bb
-  12. Diminished seventh: C Eb Gb A
-  
-- Bank 2: Diatonic (major/natural minor) scales
-  1. C  major / A  natural minor: C D E F G A B 
-  2. C# major / Bb natural minor
-  3. D  major / B  natural minor
-  4. Eb major / C  natural minor
-  5. E  major / C# natural minor
-  6. F  major / D  natural minor
-  7. F# major / Eb natural minor
-  8. G  major / E  natural minor
-  9. G# major / F  natural minor
-  10. A  major / F# natural minor
-  11. Bb major / G  natural minor
-  12. B  major / G# natural minor
-  
-- Bank 3: Harmonic minor scales
-  1. C  harmonic minor: C D Eb F G Ab B 
-  2. C# harmonic minor
-  3. D  harmonic minor  
- and so on
-  
-- Bank 4: Melodic minor (ascending/jazz) scales
-  1. C  melodic minor: C D Eb F G A B 
-  2. C# melodic minor
-  3. D  melodic minor  
-  and so on
-  
-- Bank 5: Pentatonic scales
-  1. C  major / A minor pentatonic: C D E G A
-  2. C# major / Bb minor pentatonic
-  3. D  major / B minor pentatonic  
-  and so on
-  
-- Bank 6: Hexatonic blues scales
-  1. C  blues: C Eb F F# G Bb 
-  2. C# blues
-  3. D  blues  
+<ul>
+<li>Bank 1 [0 array index]: Top twelve. (Note a few of these duplicate later entries. However, only the index is duplicated; the scales themselves are stored only once.)
+<ol type="1">
+<li>Chromatic: C C# D Eb E F F# G G# A Bb B</li>
+<li>Major: C D E F G A B </li>
+<li>Natural minor: C D Eb F G Ab Bb </li>
+<li>Harmonic minor: C D Eb F G Ab B </li>
+<li>Major pentatonic: C D E G A</li>
+<li>Minor pentatonic: C Eb F G Bb</li>
+<li>Hexatonic blues: C Eb F F# G Bb </li>
+<li>Whole tone: C D E F# G# A#</li>
+<li>Major triad: C E G</li>
+<li>Minor triad: C Eb G</li>
+<li>Dominant seventh: C E G Bb</li>
+<li>Diminished seventh: C Eb Gb A</li>
+</li><br>
+<li> Bank 2: Diatonic (major/natural minor) scales
+<ol type="1">
+<li>C  major / A  natural minor: C D E F G A B </li>
+<li>C# major / Bb natural minor</li>
+<li>D  major / B  natural minor</li>
+<li>Eb major / C  natural minor</li>
+<li>E  major / C# natural minor</li>
+<li>F  major / D  natural minor</li>
+<li>F# major / Eb natural minor</li>
+<li>G  major / E  natural minor</li>
+<li>G# major / F  natural minor</li>
+<li>A  major / F# natural minor</li>
+<li>Bb major / G  natural minor</li>
+<li>B  major / G# natural minor</li>
+</ol>
+</li><br>
+<li> Bank 3: Harmonic minor scales
+<ol type="1">
+<li>C  harmonic minor: C D Eb F G Ab B </li>
+<li>C# harmonic minor</li>
+<li>D  harmonic minor  </li>
+</ol>
 and so on
+</li><br>
+<li> Bank 4: Melodic minor (ascending/jazz) scales
+<ol type="1">
+<li>C  melodic minor: C D Eb F G A B </li>
+<li>C# melodic minor</li>
+<li>D  melodic minor  </li>
+</ol>
+  and so on
+</li><br>
+<li> Bank 5: Pentatonic scales
+<ol type="1">
+<li>C  major / A minor pentatonic: C D E G A</li>
+<li>C# major / Bb minor pentatonic</li>
+<li>D  major / B minor pentatonic  </li>
+</ol>
+  and so on
+</li><br>
+<li> Bank 6: Hexatonic blues scales
+<ol type="1">
+<li>C  blues: C Eb F F# G Bb </li>
+<li>C# blues</li>
+<li>D  blues  </li>
+</ol>
+and so on
+</li>
+</ul>
 
 ## Esoteric Scales set
-- Bank 1: Same as Common Scales Bank 1
-
-- Bank 2: Just intonation/Pythagorean
-  - Just intonation
-    1. Ptolemy's Intense Diatonic Syntonon, also Zarlino's scale (scl/ptolemy.scl)
-    2. Ellis's Duodene : genus [33355] (scl/duodene.scl)
-    3. 5-limit diamond 1/1 6/5 5/4 4/3 3/2 8/5 5/3
-    4. 7-limit diamond 1/1 8/7 7/6 6/5 5/4 4/3 7/5 10/7 3/2 8/5 5/3 12/7 7/4
-    5. Harry Partch's 43-tone pure scale (scl/partch_43.scl)
-    6. reserved
-    6. reserved
-    6. reserved
-  - Pythagorean
-    9. 5 note 
-    - 7 note 
-    - 12 note
-    - 17 note
-
-- Bank 3: Meantone
-  - Quarter comma
-    1. 5 note
-    - 7 note
-    - 12 note
-    - 19 note
-    - 31 note
-  - Third comma
-    1. 5 note
-    - 7 note
-    - 12 note
-    - 19 note
-  - 2/7 comma
-     1. 5 note
-     - 7 note
-     - 12 note
- 
-- Bank 4: Well temperaments
-  1. Werckmeister III
-  - Werckmeister IV
-  - Werckmeister V
-  - Werckmeister VI
-  - Neidhardt I
-  - Neidhardt II
-  - Neidhardt III
-  - Kirnberger II
-  - Kirnberger III
-  - Vallotti
-  - Young 1
-  - Young 2
-
-- Bank 5: Macrotonal (and 12-note) equal divisions
-  1. 1 note (octaves)
-  - 2 note (tritones)
-  - 3 note (major thirds)
-  - 4 note (minor thirds or diminished seventh)
-  - 5 note
-  - 6 note (whole tones)
-  - 7 note
-  - 8 note
-  - 9 note
-  - 10 note
-  - 11 note
-  - 12 note (semitones)
-
-- Bank 6: Microtonal equal divisions
-  1. 13 note
-  - 14 note
-  - 15 note
-  - 16 note
-  - 17 note
-  - 18 note
-  - 19 note
-  - 20 note
-  - 21 note
-  - 22 note
-  - 23 note
-  - 24 note (quarter tones)
+<ul>
+	<li>Bank 1: Same as Common Scales Bank 1
+	</li><br>
+	<li> Bank 2: Just intonation/Pythagorean
+	<ol type=1>
+		<li>Ptolemy's Intense Diatonic Syntonon, also Zarlino's scale (scl/ptolemy.scl)</li>
+		<li>Ellis's Duodene : genus [33355] (scl/duodene.scl)</li>
+		<li>5-limit diamond 1/1 6/5 5/4 4/3 3/2 8/5 5/3</li>
+		<li>7-limit diamond 1/1 8/7 7/6 6/5 5/4 4/3 7/5 10/7 3/2 8/5 5/3 12/7 7/4</li>
+		<li>Harry Partch's 43-tone pure scale (scl/partch_43.scl)</li>
+		<li>reserved</li>
+		<li>reserved</li>
+		<li>reserved</li>
+		<li>Pythagorean 5 note </li>
+		<li>Pythagorean 7 note </li>
+		<li>Pythagorean 12 note</li>
+		<li>Pythagorean 17 note</li>
+	</ol>
+	</li><br>
+	<li> Bank 3: Meantone
+	<ol type=1>
+		<li>Quarter comma 5 note</li>
+		<li>Quarter comma 7 note</li>
+		<li>Quarter comma 12 note</li>
+		<li>Quarter comma 19 note</li>
+		<li>Third comma 5 note</li>
+		<li>Third comma 7 note</li>
+		<li>Third comma 12 note</li>
+		<li>Third comma 19 note</li>
+		<li>2/7 comma 5 note</li>
+		<li>2/7 comma 7 note</li>
+		<li>2/7 comma 12 note</li>
+	</ol>
+	</li><br>
+	<li> Bank 4: Well temperaments
+	<ol type="1">
+		<li>Werckmeister III</li>
+		<li>Werckmeister IV</li>
+		<li>Werckmeister V</li>
+		<li>Werckmeister VI</li>
+		<li>Neidhardt I</li>
+		<li>Neidhardt II</li>
+		<li>Neidhardt III</li>
+		<li>Kirnberger II</li>
+		<li>Kirnberger III</li>
+		<li>Vallotti</li>
+		<li>Young 1</li>
+		<li>Young 2</li>
+	</ol>
+	</li><br>
+	<li> Bank 5: Macrotonal (and 12-note) equal divisions
+	<ol type="1">
+		<li>1 note (octaves)</li>
+		<li>2 note (tritones)</li>
+		<li>3 note (major thirds)</li>
+		<li>4 note (minor thirds or diminished seventh)</li>
+		<li>5 note</li>
+		<li>6 note (whole tones)</li>
+		<li>7 note</li>
+		<li>8 note</li>
+		<li>9 note</li>
+		<li>10 note</li>
+		<li>11 note</li>
+		<li>12 note (semitones)</li>
+	</ol>
+	</li><br>
+	<li> Bank 6: Microtonal equal divisions
+	<ol type="1">
+		<li>13 note</li>
+		<li>14 note</li>
+		<li>15 note</li>
+		<li>16 note</li>
+		<li>17 note</li>
+		<li>18 note</li>
+		<li>19 note</li>
+		<li>20 note</li>
+		<li>21 note</li>
+		<li>22 note</li>
+		<li>23 note</li>
+		<li>24 note (quarter tones)</li>
+	</ol>
+	</li><br>
+</ul>
