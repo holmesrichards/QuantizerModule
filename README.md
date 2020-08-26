@@ -30,3 +30,6 @@ The rotary switches are used to select a bank of scales and a scale within that 
 
 ## Building
 For build notes see [here](docs/BUILD.md).
+
+![](docs/quantizer.jpg)
+
