@@ -28,7 +28,7 @@
 #define DAC1   4095   // DAC counts corresponding to defined voltage
 #define V1     5.0    // voltage corresponding to DAC1
 #define DACPEROCTAVE  (DAC1/V1)  // DAC counts per octave
-#define SCALESET 1    // 0 for common scales, 1 for esoteric scales
+#define SCALESET 0    // 0 for common scales, 1 for esoteric scales
 
 struct QuantizeResponse {
   int Note; 
