@@ -10,7 +10,7 @@
 +e 12 0 4 7 # major triad
 +e 12 0 3 7 # minor triad
 +e 12 0 4 7 10 # dominant seventh
-+e 12 0 3 5 9 # diminished seventh
++e 12 0 3 6 9 # diminished seventh
 +b 2 # Diatonic
 +d 1 2 2 1                  #C  major / A  natural minor
 +s 2
