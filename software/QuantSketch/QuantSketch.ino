@@ -17,7 +17,7 @@ to do the quantization, this is just the glue in between...
 
 #define OCTAVE (4095 / 5)
 #define NOTE (OCTAVE / 12)
-#define DEBUG true
+#define DEBUG false
 
 using namespace di;
 
@@ -116,9 +116,9 @@ void loop()
 	  // Read the rotary switches
 	  rsbank[iq] = dac_inoBoard.readCV(bankChan[iq]);
 	  rsscale[iq] = dac_inoBoard.readCV(scaleChan[iq]);
-	  // Get CV, convert to 12 bits
-	  cv[iq] = 4.0 * dac_inoBoard.readCV(cv1InChan[iq]);
-	  cv2[iq] = 4.0 * dac_inoBoard.readCV(cv2InChan[iq]);
+	  // Get CV, convert to 11 bits
+	  cv[iq] = 2.0 * dac_inoBoard.readCV(cv1InChan[iq]);
+	  cv2[iq] = 2.0 * dac_inoBoard.readCV(cv2InChan[iq]);
 	  // Check the quantization gate/switch
 	  qgate[iq] = dac_inoBoard.readGate(quantInChan[iq]);
 	  
