@@ -28,6 +28,10 @@ If nothing is plugged into the Trigger input, the input control voltages are sam
 
 The rotary switches are used to select a bank of scales and a scale within that bank. There can be up to 12 scales stored in each of up to 6 banks, which makes 72 scales for those of you who've lost your calculator. ("Up to." Depending on the scales, 72 of them might exceed the Arduino's program memory capacity.) See [scales document](./docs/SCALES.md) for the scales built into the software as supplied. If you want other scales it's easy enough to change them. There's a mechanism to convert Scala format scale files, or definitions in terms of equal divisions of the octave or generators and periods into data for the Quantizer library. See [change scale instructions](./docs/CHANGESCALES.md).
 
+## Current requirements
+28 mA +12 V  
+ 4 mA -12 V
+
 ## Building
 For build notes see [here](docs/BUILD.md).
 
