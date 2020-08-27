@@ -68,9 +68,9 @@
 
 import sys, getopt, math, re
 
-DACTOP = 4095   # limit of DAC (2**12-1)
+DACTOP = 2047   # limit of DAC (2**11-1, we only cover 0 to 5 volts)
 DAC1   = 4095   # DAC counts corresponding to defined voltage
-V1     = 5.0    # voltage corresponding to DAC1
+V1     = 10.0    # voltage corresponding to DAC1
 DACPEROCTAVE  = (DAC1/V1)  # DAC counts per octave
 
 NBANK = 6  # number of banks
