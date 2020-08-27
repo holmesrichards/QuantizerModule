@@ -71,9 +71,9 @@ scl/young2.scl
 +e 12 0 2 4 7 9  #major pentatonic
 +e 12 0 3 5 7 10 #minor pentatonic
 +e 12 0 3 5 6 7 10 #hexatonic blues
-+d 5 6 1 8
++d 5 6 1 8   # 6-equal or whole tones
 +s 9
 +e 12 0 4 7 # major triad
 +e 12 0 3 7 # minor triad
 +e 12 0 4 7 10 # dominant seventh
-+d 5 4 1 12
++d 5 4 1 12 # diminished seventh
