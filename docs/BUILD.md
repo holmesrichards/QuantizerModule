@@ -11,7 +11,7 @@ Dual Quantizer does not use:
 
 so these components can be omitted: Q1, Q2, R10–13 (don't omit R14!), J5–J8, J10, J11, J14
 
-dac/ino CV outputs can range 0–10V or ±5V. Set jumpers for 0–10V outputs. Since CV1 is limited to 0–5V, the quantized CV1 will also be limited to about 0–5V, but the CV2 offset can change the output range up to 0–10V. If desired you can omit J1 and J2 in favor of hardwired jumpers.
+dac/ino CV outputs can range 0–10V or ±5V. Set jumpers for 0–10V outputs. Since CV1 is limited to 0–5V, the quantized CV1 will also be limited to about 0–5V, but the CV2 offset can change the output range up to 5–10V. If desired you can omit J1 and J2 in favor of hardwired jumpers.
 
 Use 35 mm spacers to mount dac/ino board to the panel after wiring is done.
 
