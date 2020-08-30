@@ -35,6 +35,15 @@ The rotary switches are used to select a bank of scales and a scale within that 
 ## Building
 For build notes see [here](docs/BUILD.md).
 
+## Software
+A sketch and two libraries are required:
+
+- [QuantSketch.ino](software/QuantSketch/QuantSketch.ino)
+- [Quantizer library](software/Quantizer) (.cpp and .h files)
+- [dac/ino library](https://github.com/holmesrichards/dac_ino/tree/master/software) (.cpp and .h files)
+
+On my system (Linux, off-line Arduino IDE) the libraries are in sub-folders, named Quantizer and dac_ino, of the ~/Arduino/libraries folder. QuantSketch.ino can be anywhere though the IDE wants it to be inside a folder called QuantSketch. For details and other platforms and IDEs, consult Arduino documentation.
+
 ## Credits
 The Quantizer library and the table building script are based on work by Brendon Cassidy, see https://github.com/bpcmusic/telex and https://github.com/bpcmusic/telex_scales .
 
