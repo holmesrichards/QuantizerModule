@@ -17,7 +17,7 @@ Use 35 mm spacers to mount dac/ino board to the panel after wiring is done.
 
 ## Quantizer panel
 
-Mount panel components to the panel, then wire (referring to [panel components schematic](docs/quantpc.pdf)):
+Mount panel components to the panel, then wire (referring to [panel components schematic](./quantpc.pdf)):
 
 * CV1 In tip normal pins to sleeve pins. Connect sleeve and tip pins to 2-pin Molex connectors to CV In A and C on the dac/ino board (ground is on the right side of the Molex connector as viewed from the tab side).
 * CV2 In tip pins to pin 3 on the attenuators. Connect sleeves to ground. 
