@@ -19,7 +19,7 @@ to do the quantization, this is just the glue in between...
 #define NOTE (OCTAVE / 12)
 #define DEBUG false
 
-using namespace di;
+using namespace dcrd;
 
 Quantizer q[2];
 
