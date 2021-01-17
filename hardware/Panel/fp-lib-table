@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name Kosmo_panel)(type KiCad)(uri ${KIPRJMOD}/Kosmo_panel.pretty)(options "")(descr ""))
+)
