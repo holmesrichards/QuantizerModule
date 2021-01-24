@@ -3,13 +3,15 @@
 ## dac/ino build information
 Current version uses v1.3 release of the [dac/ino](https://github.com/holmesrichards/dac_ino) board. See that repository for general building information.
 
+**Note that the dac/ino schematic (for the board) and the Quantizer schematic (for the panel components) are two separate things. Component references below are to the dac/ino board, *not* the Quantizer panel. **
+
 Dual Quantizer does not use:
 
 * Gate Out A and B
 * All pin headers (aside from 3-pin jumper headers)
 * VCC/Gnd Molex header
 
-so these components can be omitted: Q1, Q2, R10–13 (don't omit R14!), J5–J8, J10, J11, J14
+so these dac/ino components can be omitted: Q1, Q2, R10–13 (don't omit R14!), J5–J8, J10, J11, J14
 
 dac/ino CV outputs can range 0–10V or ±5V. Set jumpers for 0–10V outputs. Since CV1 is limited to 0–5V, the quantized CV1 will also be limited to about 0–5V, but the CV2 offset can change the output range up to 5–10V. If desired you can omit J1 and J2 in favor of hardwired jumpers.
 
@@ -29,6 +31,9 @@ Mount panel components to the panel, then wire (referring to [panel components s
 * Attenuator pins 1 and 2 to a 2-pin Molex connector (pin 1 is ground) to CV In B and D.
 * On Scale rotary switches, add 11 1k resistors between pins 1–2, 2–3, 3–4, … 11–12. Wire center pin to 8 pin Molex as shown in circuit diagram. Connect pin 1 to ground and pin 12 to VCC from 8 pin Molex. 
 * On Bank rotary switches, add 5 1k resistors between pins 1–2, 2–3, 3–4, 4–5, 5–6. Wire center pin to 8 pin Molex as shown in circuit diagram. Connect pin 1 to ground and 6 to VCC from 8 pin Molex. 
+
+Here's a diagram (by Dud):
+![](/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/dac_ino_projects/QuantizerModule/docs/Sans titre.jpg) 
 
 Here's a photo where you can kind of see the rotary switches:
 <img src="rotswitch.jpg" width=640>
