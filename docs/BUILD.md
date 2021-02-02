@@ -33,10 +33,10 @@ Mount panel components to the panel, then wire (referring to [panel components s
 * On Bank rotary switches, add 5 1k resistors between pins 1–2, 2–3, 3–4, 4–5, 5–6. Wire center pin to 8 pin Molex as shown in circuit diagram. Connect pin 1 to ground and 6 to VCC from 8 pin Molex. 
 
 Here's a diagram (by Dud):
-![](/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/dac_ino_projects/QuantizerModule/docs/Sans titre.jpg) 
+![](Sans titre.jpg) 
 
 Here's a photo where you can kind of see the rotary switches:
-<img src="rotswitch.jpg" width=640>
+![](rotswitch.jpg)
 
 8 pin Molex connections are, from left to right:
 
@@ -50,6 +50,6 @@ Here's a photo where you can kind of see the rotary switches:
 8 Vcc
 
 Wiring photo: (Black wires are ground, red are Vcc, white others are signals)
-<img src="quantizer_back.jpg" width=320>
+![](quantizer_back.jpg)
 
 BOM for the panel components is [here](quantpc_bom.md).
