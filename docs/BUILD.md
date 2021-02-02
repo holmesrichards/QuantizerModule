@@ -33,7 +33,7 @@ Mount panel components to the panel, then wire (referring to [panel components s
 * On Bank rotary switches, add 5 1k resistors between pins 1–2, 2–3, 3–4, 4–5, 5–6. Wire center pin to 8 pin Molex as shown in circuit diagram. Connect pin 1 to ground and 6 to VCC from 8 pin Molex. 
 
 Here's a diagram (by Dud):
-![](Sans titre.jpg) 
+<img src="Sans titre.jpg">
 
 Here's a photo where you can kind of see the rotary switches:
 ![](rotswitch.jpg)
