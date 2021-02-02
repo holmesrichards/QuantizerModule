@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/scratch/dac_ino_projects/QuantizerModule/hardware/Panel components/quantpc.sch</source>
-    <date>Wed 26 Aug 2020 01:37:29 PM EDT</date>
-    <tool>Eeschema 5.1.6-c6e7f7d~87~ubuntu20.04.1</tool>
+    <source>/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/dac_ino_projects/QuantizerModule/hardware/Panel components/quantpc.sch</source>
+    <date>Sun 24 Jan 2021 08:23:08 AM EST</date>
+    <tool>Eeschema 5.1.9-73d0e3b20d~88~ubuntu20.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>Dual quantizer panel components</title>
@@ -19,10 +19,10 @@
     </sheet>
     <sheet number="2" name="/Unit 2/" tstamps="/5F46B998/">
       <title_block>
-        <title/>
-        <company/>
+        <title>Dual quantizer panel components</title>
+        <company>Rich Holmes / Analog Output</company>
         <rev/>
-        <date/>
+        <date>2020-08-04</date>
         <source>Unit 2.sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
@@ -32,7 +32,7 @@
     </sheet>
   </design>
   <components>
-    <comp ref="SW1">
+    <comp ref="SW103">
       <value>SW_SPST</value>
       <footprint>Daughterboard:SPDT-toggle-switch-1M-series</footprint>
       <datasheet>~</datasheet>
@@ -40,7 +40,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5ECF2ACF</tstamp>
     </comp>
-    <comp ref="RV1">
+    <comp ref="RV101">
       <value>100k</value>
       <footprint>Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_CircularHoles</footprint>
       <datasheet>~</datasheet>
@@ -48,196 +48,196 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5ECF9932</tstamp>
     </comp>
-    <comp ref="SW2">
+    <comp ref="SW101">
       <value>SW_Rotary12</value>
       <datasheet>http://cdn-reichelt.de/documents/datenblatt/C200/DS-Serie%23LOR.pdf</datasheet>
       <libsource lib="Switch" part="SW_Rotary12" description="rotary switch with 12 positions"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EE1EDE3</tstamp>
     </comp>
-    <comp ref="R1">
+    <comp ref="R119">
       <value>1k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EE1EDEB</tstamp>
     </comp>
-    <comp ref="R2">
+    <comp ref="R117">
       <value>1k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EE1EDF3</tstamp>
     </comp>
-    <comp ref="R3">
+    <comp ref="R115">
       <value>1k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EE1EDFB</tstamp>
     </comp>
-    <comp ref="R4">
+    <comp ref="R112">
       <value>1k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EE1EE03</tstamp>
     </comp>
-    <comp ref="R5">
+    <comp ref="R110">
       <value>1k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EE1EE0A</tstamp>
     </comp>
-    <comp ref="R6">
+    <comp ref="R109">
       <value>1k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EE1EE18</tstamp>
     </comp>
-    <comp ref="R7">
+    <comp ref="R108">
       <value>1k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EE1EE21</tstamp>
     </comp>
-    <comp ref="R8">
+    <comp ref="R107">
       <value>1k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EE1EE2A</tstamp>
     </comp>
-    <comp ref="R9">
+    <comp ref="R106">
       <value>1k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EE1EE33</tstamp>
     </comp>
-    <comp ref="R10">
+    <comp ref="R104">
       <value>1k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EE1EE3B</tstamp>
     </comp>
-    <comp ref="R11">
+    <comp ref="R103">
       <value>1k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EE95D0E</tstamp>
     </comp>
-    <comp ref="SW3">
+    <comp ref="SW102">
       <value>SW_Rotary12</value>
       <datasheet>http://cdn-reichelt.de/documents/datenblatt/C200/DS-Serie%23LOR.pdf</datasheet>
       <libsource lib="Switch" part="SW_Rotary12" description="rotary switch with 12 positions"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EEAB262</tstamp>
     </comp>
-    <comp ref="R12">
+    <comp ref="R120">
       <value>1k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EEAB269</tstamp>
     </comp>
-    <comp ref="R13">
+    <comp ref="R118">
       <value>1k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EEAB271</tstamp>
     </comp>
-    <comp ref="R14">
+    <comp ref="R116">
       <value>1k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EEAB279</tstamp>
     </comp>
-    <comp ref="R15">
+    <comp ref="R113">
       <value>1k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EEAB281</tstamp>
     </comp>
-    <comp ref="R16">
+    <comp ref="R111">
       <value>1k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EEAB288</tstamp>
     </comp>
-    <comp ref="J10">
+    <comp ref="J101">
       <value>AudioJack2_SwitchT</value>
       <datasheet>~</datasheet>
       <libsource lib="Connector" part="AudioJack2_SwitchT" description="Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F2A453E</tstamp>
     </comp>
-    <comp ref="J14">
+    <comp ref="J102">
       <value>AudioJack2_SwitchT</value>
       <datasheet>~</datasheet>
       <libsource lib="Connector" part="AudioJack2_SwitchT" description="Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F2B612B</tstamp>
     </comp>
-    <comp ref="J16">
+    <comp ref="J103">
       <value>AudioJack2_SwitchT</value>
       <datasheet>~</datasheet>
       <libsource lib="Connector" part="AudioJack2_SwitchT" description="Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F2C52CA</tstamp>
     </comp>
-    <comp ref="R18">
+    <comp ref="R101">
       <value>10k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F2D5069</tstamp>
     </comp>
-    <comp ref="R19">
+    <comp ref="R102">
       <value>10k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F2D5BFA</tstamp>
     </comp>
-    <comp ref="R20">
+    <comp ref="R105">
       <value>100k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F2D9D4B</tstamp>
     </comp>
-    <comp ref="J11">
+    <comp ref="J104">
       <value>AudioJack2_SwitchT</value>
       <datasheet>~</datasheet>
       <libsource lib="Connector" part="AudioJack2_SwitchT" description="Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F2E4F0C</tstamp>
     </comp>
-    <comp ref="R17">
+    <comp ref="R114">
       <value>10k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F2E4F2B</tstamp>
     </comp>
-    <comp ref="J15">
+    <comp ref="J105">
       <value>AudioJack2_SwitchT</value>
       <datasheet>~</datasheet>
       <libsource lib="Connector" part="AudioJack2_SwitchT" description="Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F2EF2E0</tstamp>
     </comp>
-    <comp ref="J1">
+    <comp ref="J106">
       <value>MOLEX 2 PIN</value>
       <footprint>Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical</footprint>
       <datasheet>~</datasheet>
@@ -245,7 +245,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F2F1E5B</tstamp>
     </comp>
-    <comp ref="J3">
+    <comp ref="J107">
       <value>MOLEX 2 PIN</value>
       <footprint>Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical</footprint>
       <datasheet>~</datasheet>
@@ -253,7 +253,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F2FA35D</tstamp>
     </comp>
-    <comp ref="J5">
+    <comp ref="J108">
       <value>MOLEX 2 PIN</value>
       <footprint>Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical</footprint>
       <datasheet>~</datasheet>
@@ -261,7 +261,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F2FD9A4</tstamp>
     </comp>
-    <comp ref="J2">
+    <comp ref="J112">
       <value>MOLEX 2 PIN</value>
       <footprint>Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical</footprint>
       <datasheet>~</datasheet>
@@ -269,7 +269,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F30173D</tstamp>
     </comp>
-    <comp ref="J4">
+    <comp ref="J113">
       <value>MOLEX 2 PIN</value>
       <footprint>Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical</footprint>
       <datasheet>~</datasheet>
@@ -277,7 +277,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F30519D</tstamp>
     </comp>
-    <comp ref="J13">
+    <comp ref="J116">
       <value>MOLEX 8 PIN</value>
       <footprint>Connector_Molex:Molex_KK-254_AE-6410-08A_1x08_P2.54mm_Vertical</footprint>
       <datasheet>~</datasheet>
@@ -285,7 +285,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F31464B</tstamp>
     </comp>
-    <comp ref="J6">
+    <comp ref="J109">
       <value>MOLEX 2 PIN</value>
       <footprint>Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical</footprint>
       <datasheet>~</datasheet>
@@ -293,7 +293,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F34EDF2</tstamp>
     </comp>
-    <comp ref="J8">
+    <comp ref="J110">
       <value>MOLEX 2 PIN</value>
       <footprint>Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical</footprint>
       <datasheet>~</datasheet>
@@ -301,7 +301,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F34EE02</tstamp>
     </comp>
-    <comp ref="J12">
+    <comp ref="J111">
       <value>MOLEX 2 PIN</value>
       <footprint>Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical</footprint>
       <datasheet>~</datasheet>
@@ -309,7 +309,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F34EE12</tstamp>
     </comp>
-    <comp ref="J7">
+    <comp ref="J114">
       <value>MOLEX 2 PIN</value>
       <footprint>Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical</footprint>
       <datasheet>~</datasheet>
@@ -317,7 +317,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F34EE22</tstamp>
     </comp>
-    <comp ref="J9">
+    <comp ref="J115">
       <value>MOLEX 2 PIN</value>
       <footprint>Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical</footprint>
       <datasheet>~</datasheet>
@@ -325,7 +325,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F34EE32</tstamp>
     </comp>
-    <comp ref="SW6">
+    <comp ref="SW106">
       <value>SW_SPST</value>
       <footprint>Daughterboard:SPDT-toggle-switch-1M-series</footprint>
       <datasheet>~</datasheet>
@@ -333,7 +333,7 @@
       <sheetpath names="/Unit 2/" tstamps="/5F46B998/"/>
       <tstamp>5F49E181</tstamp>
     </comp>
-    <comp ref="RV2">
+    <comp ref="RV102">
       <value>100k</value>
       <footprint>Potentiometer_THT:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_CircularHoles</footprint>
       <datasheet>~</datasheet>
@@ -341,189 +341,189 @@
       <sheetpath names="/Unit 2/" tstamps="/5F46B998/"/>
       <tstamp>5F49E187</tstamp>
     </comp>
-    <comp ref="SW4">
+    <comp ref="SW104">
       <value>SW_Rotary12</value>
       <datasheet>http://cdn-reichelt.de/documents/datenblatt/C200/DS-Serie%23LOR.pdf</datasheet>
       <libsource lib="Switch" part="SW_Rotary12" description="rotary switch with 12 positions"/>
       <sheetpath names="/Unit 2/" tstamps="/5F46B998/"/>
       <tstamp>5F49E18D</tstamp>
     </comp>
-    <comp ref="R21">
+    <comp ref="R139">
       <value>1k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/Unit 2/" tstamps="/5F46B998/"/>
       <tstamp>5F49E194</tstamp>
     </comp>
-    <comp ref="R22">
+    <comp ref="R137">
       <value>1k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/Unit 2/" tstamps="/5F46B998/"/>
       <tstamp>5F49E19C</tstamp>
     </comp>
-    <comp ref="R23">
+    <comp ref="R135">
       <value>1k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/Unit 2/" tstamps="/5F46B998/"/>
       <tstamp>5F49E1A4</tstamp>
     </comp>
-    <comp ref="R24">
+    <comp ref="R132">
       <value>1k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/Unit 2/" tstamps="/5F46B998/"/>
       <tstamp>5F49E1AC</tstamp>
     </comp>
-    <comp ref="R25">
+    <comp ref="R130">
       <value>1k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/Unit 2/" tstamps="/5F46B998/"/>
       <tstamp>5F49E1B3</tstamp>
     </comp>
-    <comp ref="R26">
+    <comp ref="R129">
       <value>1k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/Unit 2/" tstamps="/5F46B998/"/>
       <tstamp>5F49E1BA</tstamp>
     </comp>
-    <comp ref="R27">
+    <comp ref="R128">
       <value>1k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/Unit 2/" tstamps="/5F46B998/"/>
       <tstamp>5F49E1C3</tstamp>
     </comp>
-    <comp ref="R28">
+    <comp ref="R127">
       <value>1k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/Unit 2/" tstamps="/5F46B998/"/>
       <tstamp>5F49E1CC</tstamp>
     </comp>
-    <comp ref="R29">
+    <comp ref="R126">
       <value>1k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/Unit 2/" tstamps="/5F46B998/"/>
       <tstamp>5F49E1D5</tstamp>
     </comp>
-    <comp ref="R30">
+    <comp ref="R124">
       <value>1k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/Unit 2/" tstamps="/5F46B998/"/>
       <tstamp>5F49E1DD</tstamp>
     </comp>
-    <comp ref="R31">
+    <comp ref="R123">
       <value>1k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/Unit 2/" tstamps="/5F46B998/"/>
       <tstamp>5F49E1F9</tstamp>
     </comp>
-    <comp ref="SW5">
+    <comp ref="SW105">
       <value>SW_Rotary12</value>
       <datasheet>http://cdn-reichelt.de/documents/datenblatt/C200/DS-Serie%23LOR.pdf</datasheet>
       <libsource lib="Switch" part="SW_Rotary12" description="rotary switch with 12 positions"/>
       <sheetpath names="/Unit 2/" tstamps="/5F46B998/"/>
       <tstamp>5F49E202</tstamp>
     </comp>
-    <comp ref="R32">
+    <comp ref="R140">
       <value>1k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/Unit 2/" tstamps="/5F46B998/"/>
       <tstamp>5F49E209</tstamp>
     </comp>
-    <comp ref="R33">
+    <comp ref="R138">
       <value>1k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/Unit 2/" tstamps="/5F46B998/"/>
       <tstamp>5F49E211</tstamp>
     </comp>
-    <comp ref="R34">
+    <comp ref="R136">
       <value>1k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/Unit 2/" tstamps="/5F46B998/"/>
       <tstamp>5F49E219</tstamp>
     </comp>
-    <comp ref="R35">
+    <comp ref="R133">
       <value>1k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/Unit 2/" tstamps="/5F46B998/"/>
       <tstamp>5F49E221</tstamp>
     </comp>
-    <comp ref="R36">
+    <comp ref="R131">
       <value>1k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/Unit 2/" tstamps="/5F46B998/"/>
       <tstamp>5F49E228</tstamp>
     </comp>
-    <comp ref="J17">
+    <comp ref="J117">
       <value>AudioJack2_SwitchT</value>
       <datasheet>~</datasheet>
       <libsource lib="Connector" part="AudioJack2_SwitchT" description="Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)"/>
       <sheetpath names="/Unit 2/" tstamps="/5F46B998/"/>
       <tstamp>5F49E246</tstamp>
     </comp>
-    <comp ref="J19">
+    <comp ref="J118">
       <value>AudioJack2_SwitchT</value>
       <datasheet>~</datasheet>
       <libsource lib="Connector" part="AudioJack2_SwitchT" description="Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)"/>
       <sheetpath names="/Unit 2/" tstamps="/5F46B998/"/>
       <tstamp>5F49E259</tstamp>
     </comp>
-    <comp ref="J21">
+    <comp ref="J119">
       <value>AudioJack2_SwitchT</value>
       <datasheet>~</datasheet>
       <libsource lib="Connector" part="AudioJack2_SwitchT" description="Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)"/>
       <sheetpath names="/Unit 2/" tstamps="/5F46B998/"/>
       <tstamp>5F49E273</tstamp>
     </comp>
-    <comp ref="R38">
+    <comp ref="R121">
       <value>10k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/Unit 2/" tstamps="/5F46B998/"/>
       <tstamp>5F49E292</tstamp>
     </comp>
-    <comp ref="R39">
+    <comp ref="R122">
       <value>10k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/Unit 2/" tstamps="/5F46B998/"/>
       <tstamp>5F49E298</tstamp>
     </comp>
-    <comp ref="R40">
+    <comp ref="R125">
       <value>100k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/Unit 2/" tstamps="/5F46B998/"/>
       <tstamp>5F49E29E</tstamp>
     </comp>
-    <comp ref="J18">
+    <comp ref="J120">
       <value>AudioJack2_SwitchT</value>
       <datasheet>~</datasheet>
       <libsource lib="Connector" part="AudioJack2_SwitchT" description="Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)"/>
       <sheetpath names="/Unit 2/" tstamps="/5F46B998/"/>
       <tstamp>5F49E2A7</tstamp>
     </comp>
-    <comp ref="R37">
+    <comp ref="R134">
       <value>10k</value>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/Unit 2/" tstamps="/5F46B998/"/>
       <tstamp>5F49E2BD</tstamp>
     </comp>
-    <comp ref="J20">
+    <comp ref="J121">
       <value>AudioJack2_SwitchT</value>
       <datasheet>~</datasheet>
       <libsource lib="Connector" part="AudioJack2_SwitchT" description="Audio Jack, 2 Poles (Mono / TS), Switched T Pole (Normalling)"/>
@@ -666,345 +666,345 @@
     </library>
   </libraries>
   <nets>
-    <net code="1" name="CV1_1">
-      <node ref="J17" pin="T"/>
-      <node ref="J10" pin="T"/>
-      <node ref="J1" pin="1"/>
+    <net code="1" name="QUANTIZE_1">
+      <node ref="R105" pin="2"/>
+      <node ref="SW103" pin="2"/>
+      <node ref="R125" pin="2"/>
+      <node ref="SW106" pin="2"/>
+      <node ref="J108" pin="1"/>
     </net>
-    <net code="2" name="CV2_1">
-      <node ref="RV1" pin="2"/>
-      <node ref="RV2" pin="2"/>
-      <node ref="J3" pin="1"/>
+    <net code="2" name="GND">
+      <node ref="J116" pin="8"/>
+      <node ref="J111" pin="2"/>
+      <node ref="J114" pin="2"/>
+      <node ref="R119" pin="1"/>
+      <node ref="J117" pin="TN"/>
+      <node ref="J117" pin="S"/>
+      <node ref="J109" pin="2"/>
+      <node ref="J101" pin="S"/>
+      <node ref="J101" pin="TN"/>
+      <node ref="SW102" pin="1"/>
+      <node ref="J102" pin="S"/>
+      <node ref="RV101" pin="1"/>
+      <node ref="SW101" pin="1"/>
+      <node ref="J119" pin="S"/>
+      <node ref="J110" pin="2"/>
+      <node ref="R120" pin="1"/>
+      <node ref="J103" pin="S"/>
+      <node ref="R139" pin="1"/>
+      <node ref="SW104" pin="1"/>
+      <node ref="J112" pin="2"/>
+      <node ref="RV102" pin="1"/>
+      <node ref="J121" pin="S"/>
+      <node ref="J104" pin="S"/>
+      <node ref="R105" pin="1"/>
+      <node ref="J120" pin="S"/>
+      <node ref="J108" pin="2"/>
+      <node ref="J107" pin="2"/>
+      <node ref="J113" pin="2"/>
+      <node ref="SW105" pin="1"/>
+      <node ref="R140" pin="1"/>
+      <node ref="J118" pin="S"/>
+      <node ref="J115" pin="2"/>
+      <node ref="J106" pin="2"/>
+      <node ref="R125" pin="1"/>
+      <node ref="J105" pin="S"/>
     </net>
-    <net code="3" name="GND">
-      <node ref="J10" pin="TN"/>
-      <node ref="J14" pin="S"/>
-      <node ref="J10" pin="S"/>
-      <node ref="J16" pin="S"/>
-      <node ref="J8" pin="2"/>
-      <node ref="SW5" pin="1"/>
-      <node ref="J13" pin="8"/>
-      <node ref="J6" pin="2"/>
-      <node ref="J12" pin="2"/>
-      <node ref="SW3" pin="1"/>
-      <node ref="R1" pin="1"/>
-      <node ref="SW2" pin="1"/>
-      <node ref="RV1" pin="1"/>
-      <node ref="J18" pin="S"/>
-      <node ref="J20" pin="S"/>
-      <node ref="R40" pin="1"/>
-      <node ref="RV2" pin="1"/>
-      <node ref="SW4" pin="1"/>
-      <node ref="R21" pin="1"/>
-      <node ref="R32" pin="1"/>
-      <node ref="J21" pin="S"/>
-      <node ref="R12" pin="1"/>
-      <node ref="J19" pin="S"/>
-      <node ref="J17" pin="S"/>
-      <node ref="J17" pin="TN"/>
-      <node ref="J5" pin="2"/>
-      <node ref="J11" pin="S"/>
-      <node ref="R20" pin="1"/>
-      <node ref="J2" pin="2"/>
-      <node ref="J7" pin="2"/>
-      <node ref="J9" pin="2"/>
-      <node ref="J15" pin="S"/>
-      <node ref="J3" pin="2"/>
-      <node ref="J4" pin="2"/>
-      <node ref="J1" pin="2"/>
+    <net code="3" name="CV2_1">
+      <node ref="J107" pin="1"/>
+      <node ref="RV101" pin="2"/>
+      <node ref="RV102" pin="2"/>
     </net>
-    <net code="4" name="CV_OUT_1">
-      <node ref="J15" pin="T"/>
-      <node ref="J4" pin="1"/>
-      <node ref="J20" pin="T"/>
+    <net code="4" name="CV1_1">
+      <node ref="J117" pin="T"/>
+      <node ref="J101" pin="T"/>
+      <node ref="J106" pin="1"/>
     </net>
-    <net code="5" name="TRIGGER_1">
-      <node ref="J11" pin="T"/>
-      <node ref="J2" pin="1"/>
-      <node ref="J18" pin="T"/>
+    <net code="5" name="BANK_1">
+      <node ref="SW102" pin="13"/>
+      <node ref="SW105" pin="13"/>
+      <node ref="J116" pin="3"/>
     </net>
-    <net code="6" name="QUANTIZE_1">
-      <node ref="J5" pin="1"/>
-      <node ref="SW6" pin="2"/>
-      <node ref="R20" pin="2"/>
-      <node ref="R40" pin="2"/>
-      <node ref="SW1" pin="2"/>
+    <net code="6" name="SCALE_1">
+      <node ref="J116" pin="2"/>
+      <node ref="SW101" pin="13"/>
+      <node ref="SW104" pin="13"/>
     </net>
-    <net code="7" name="Net-(J16-PadT)">
-      <node ref="J16" pin="T"/>
-      <node ref="SW1" pin="1"/>
+    <net code="7" name="CV_OUT_1">
+      <node ref="J121" pin="T"/>
+      <node ref="J105" pin="T"/>
+      <node ref="J113" pin="1"/>
     </net>
-    <net code="8" name="Net-(J16-PadTN)">
-      <node ref="J16" pin="TN"/>
-      <node ref="R19" pin="2"/>
+    <net code="8" name="TRIGGER_1">
+      <node ref="J120" pin="T"/>
+      <node ref="J104" pin="T"/>
+      <node ref="J112" pin="1"/>
     </net>
-    <net code="9" name="Net-(J14-PadTN)">
-      <node ref="R18" pin="2"/>
-      <node ref="J14" pin="TN"/>
+    <net code="9" name="Net-(J104-PadTN)">
+      <node ref="R114" pin="2"/>
+      <node ref="J104" pin="TN"/>
     </net>
-    <net code="10" name="VCC">
-      <node ref="SW3" pin="6"/>
-      <node ref="R37" pin="1"/>
-      <node ref="R38" pin="1"/>
-      <node ref="R39" pin="1"/>
-      <node ref="R17" pin="1"/>
-      <node ref="R36" pin="2"/>
-      <node ref="R18" pin="1"/>
-      <node ref="R19" pin="1"/>
-      <node ref="R16" pin="2"/>
-      <node ref="R11" pin="2"/>
-      <node ref="J13" pin="1"/>
-      <node ref="SW4" pin="12"/>
-      <node ref="SW2" pin="12"/>
-      <node ref="R31" pin="2"/>
-      <node ref="SW5" pin="6"/>
+    <net code="10" name="Net-(J102-PadTN)">
+      <node ref="J102" pin="TN"/>
+      <node ref="R101" pin="2"/>
     </net>
-    <net code="11" name="Net-(J15-PadTN)">
-      <node ref="J15" pin="TN"/>
+    <net code="11" name="Net-(J103-PadT)">
+      <node ref="J103" pin="T"/>
+      <node ref="SW103" pin="1"/>
     </net>
-    <net code="12" name="Net-(J11-PadTN)">
-      <node ref="R17" pin="2"/>
-      <node ref="J11" pin="TN"/>
+    <net code="12" name="Net-(J105-PadTN)">
+      <node ref="J105" pin="TN"/>
     </net>
-    <net code="13" name="TRIGGER_2">
-      <node ref="J7" pin="1"/>
+    <net code="13" name="SCALE_2">
+      <node ref="J116" pin="4"/>
     </net>
-    <net code="14" name="CV_OUT_2">
-      <node ref="J9" pin="1"/>
+    <net code="14" name="VCC">
+      <node ref="J116" pin="1"/>
+      <node ref="R123" pin="2"/>
+      <node ref="R111" pin="2"/>
+      <node ref="SW102" pin="6"/>
+      <node ref="R134" pin="1"/>
+      <node ref="R102" pin="1"/>
+      <node ref="R101" pin="1"/>
+      <node ref="R122" pin="1"/>
+      <node ref="R121" pin="1"/>
+      <node ref="SW104" pin="12"/>
+      <node ref="SW105" pin="6"/>
+      <node ref="R114" pin="1"/>
+      <node ref="R103" pin="2"/>
+      <node ref="R131" pin="2"/>
+      <node ref="SW101" pin="12"/>
     </net>
-    <net code="15" name="QUANTIZE_2">
-      <node ref="J12" pin="1"/>
+    <net code="15" name="Net-(J116-Pad6)">
+      <node ref="J116" pin="6"/>
     </net>
-    <net code="16" name="Net-(SW3-Pad8)">
-      <node ref="SW3" pin="8"/>
+    <net code="16" name="CV_OUT_2">
+      <node ref="J115" pin="1"/>
     </net>
-    <net code="17" name="Net-(SW3-Pad12)">
-      <node ref="SW3" pin="12"/>
+    <net code="17" name="Net-(J116-Pad7)">
+      <node ref="J116" pin="7"/>
     </net>
-    <net code="18" name="Net-(SW3-Pad11)">
-      <node ref="SW3" pin="11"/>
+    <net code="18" name="TRIGGER_2">
+      <node ref="J114" pin="1"/>
     </net>
-    <net code="19" name="Net-(SW3-Pad10)">
-      <node ref="SW3" pin="10"/>
+    <net code="19" name="Net-(SW102-Pad12)">
+      <node ref="SW102" pin="12"/>
     </net>
-    <net code="20" name="Net-(SW3-Pad9)">
-      <node ref="SW3" pin="9"/>
+    <net code="20" name="Net-(SW102-Pad11)">
+      <node ref="SW102" pin="11"/>
     </net>
-    <net code="21" name="Net-(SW3-Pad7)">
-      <node ref="SW3" pin="7"/>
+    <net code="21" name="Net-(SW102-Pad10)">
+      <node ref="SW102" pin="10"/>
     </net>
-    <net code="22" name="Net-(J13-Pad7)">
-      <node ref="J13" pin="7"/>
+    <net code="22" name="Net-(SW102-Pad9)">
+      <node ref="SW102" pin="9"/>
     </net>
-    <net code="23" name="Net-(J13-Pad6)">
-      <node ref="J13" pin="6"/>
+    <net code="23" name="Net-(SW102-Pad8)">
+      <node ref="SW102" pin="8"/>
     </net>
-    <net code="24" name="BANK_2">
-      <node ref="J13" pin="5"/>
+    <net code="24" name="Net-(SW102-Pad7)">
+      <node ref="SW102" pin="7"/>
     </net>
-    <net code="25" name="SCALE_2">
-      <node ref="J13" pin="4"/>
+    <net code="25" name="CV1_2">
+      <node ref="J109" pin="1"/>
     </net>
-    <net code="26" name="BANK_1">
-      <node ref="SW5" pin="13"/>
-      <node ref="J13" pin="3"/>
-      <node ref="SW3" pin="13"/>
+    <net code="26" name="BANK_2">
+      <node ref="J116" pin="5"/>
     </net>
-    <net code="27" name="SCALE_1">
-      <node ref="SW2" pin="13"/>
-      <node ref="SW4" pin="13"/>
-      <node ref="J13" pin="2"/>
+    <net code="27" name="QUANTIZE_2">
+      <node ref="J111" pin="1"/>
     </net>
     <net code="28" name="CV2_2">
-      <node ref="J8" pin="1"/>
+      <node ref="J110" pin="1"/>
     </net>
-    <net code="29" name="CV1_2">
-      <node ref="J6" pin="1"/>
+    <net code="29" name="Net-(R104-Pad1)">
+      <node ref="SW101" pin="10"/>
+      <node ref="R104" pin="1"/>
+      <node ref="R106" pin="2"/>
     </net>
-    <net code="30" name="Net-(R10-Pad1)">
-      <node ref="R10" pin="1"/>
-      <node ref="R9" pin="2"/>
-      <node ref="SW2" pin="10"/>
+    <net code="30" name="Net-(R106-Pad1)">
+      <node ref="R107" pin="2"/>
+      <node ref="R106" pin="1"/>
+      <node ref="SW101" pin="9"/>
     </net>
-    <net code="31" name="Net-(R8-Pad2)">
-      <node ref="R9" pin="1"/>
-      <node ref="R8" pin="2"/>
-      <node ref="SW2" pin="9"/>
+    <net code="31" name="Net-(R107-Pad1)">
+      <node ref="SW101" pin="8"/>
+      <node ref="R107" pin="1"/>
+      <node ref="R108" pin="2"/>
     </net>
-    <net code="32" name="Net-(R7-Pad2)">
-      <node ref="R8" pin="1"/>
-      <node ref="R7" pin="2"/>
-      <node ref="SW2" pin="8"/>
+    <net code="32" name="Net-(R108-Pad1)">
+      <node ref="SW101" pin="7"/>
+      <node ref="R108" pin="1"/>
+      <node ref="R109" pin="2"/>
     </net>
-    <net code="33" name="Net-(R6-Pad2)">
-      <node ref="SW2" pin="7"/>
-      <node ref="R7" pin="1"/>
-      <node ref="R6" pin="2"/>
+    <net code="33" name="Net-(R103-Pad1)">
+      <node ref="SW101" pin="11"/>
+      <node ref="R104" pin="2"/>
+      <node ref="R103" pin="1"/>
     </net>
-    <net code="34" name="Net-(R10-Pad2)">
-      <node ref="R11" pin="1"/>
-      <node ref="SW2" pin="11"/>
-      <node ref="R10" pin="2"/>
+    <net code="34" name="Net-(R109-Pad1)">
+      <node ref="R109" pin="1"/>
+      <node ref="SW101" pin="6"/>
+      <node ref="R110" pin="2"/>
     </net>
-    <net code="35" name="Net-(R5-Pad2)">
-      <node ref="SW2" pin="6"/>
-      <node ref="R6" pin="1"/>
-      <node ref="R5" pin="2"/>
+    <net code="35" name="Net-(J102-PadT)">
+      <node ref="J102" pin="T"/>
+      <node ref="RV101" pin="3"/>
     </net>
-    <net code="36" name="Net-(J14-PadT)">
-      <node ref="J14" pin="T"/>
-      <node ref="RV1" pin="3"/>
+    <net code="36" name="Net-(R110-Pad1)">
+      <node ref="R110" pin="1"/>
+      <node ref="R112" pin="2"/>
+      <node ref="SW101" pin="5"/>
     </net>
-    <net code="37" name="Net-(R4-Pad2)">
-      <node ref="R5" pin="1"/>
-      <node ref="R4" pin="2"/>
-      <node ref="SW2" pin="5"/>
+    <net code="37" name="Net-(R112-Pad1)">
+      <node ref="SW101" pin="4"/>
+      <node ref="R112" pin="1"/>
+      <node ref="R115" pin="2"/>
     </net>
-    <net code="38" name="Net-(R3-Pad2)">
-      <node ref="R4" pin="1"/>
-      <node ref="SW2" pin="4"/>
-      <node ref="R3" pin="2"/>
+    <net code="38" name="Net-(R115-Pad1)">
+      <node ref="R115" pin="1"/>
+      <node ref="R117" pin="2"/>
+      <node ref="SW101" pin="3"/>
     </net>
-    <net code="39" name="Net-(R2-Pad2)">
-      <node ref="SW2" pin="3"/>
-      <node ref="R2" pin="2"/>
-      <node ref="R3" pin="1"/>
+    <net code="39" name="Net-(R117-Pad1)">
+      <node ref="SW101" pin="2"/>
+      <node ref="R119" pin="2"/>
+      <node ref="R117" pin="1"/>
     </net>
-    <net code="40" name="Net-(R1-Pad2)">
-      <node ref="R2" pin="1"/>
-      <node ref="R1" pin="2"/>
-      <node ref="SW2" pin="2"/>
+    <net code="40" name="Net-(J103-PadTN)">
+      <node ref="R102" pin="2"/>
+      <node ref="J103" pin="TN"/>
     </net>
-    <net code="41" name="Net-(R13-Pad2)">
-      <node ref="R14" pin="1"/>
-      <node ref="SW3" pin="3"/>
-      <node ref="R13" pin="2"/>
+    <net code="41" name="Net-(R118-Pad1)">
+      <node ref="R118" pin="1"/>
+      <node ref="R120" pin="2"/>
+      <node ref="SW102" pin="2"/>
     </net>
-    <net code="42" name="Net-(R12-Pad2)">
-      <node ref="SW3" pin="2"/>
-      <node ref="R13" pin="1"/>
-      <node ref="R12" pin="2"/>
+    <net code="42" name="Net-(R113-Pad1)">
+      <node ref="SW102" pin="4"/>
+      <node ref="R113" pin="1"/>
+      <node ref="R116" pin="2"/>
     </net>
-    <net code="43" name="Net-(R15-Pad2)">
-      <node ref="R16" pin="1"/>
-      <node ref="R15" pin="2"/>
-      <node ref="SW3" pin="5"/>
+    <net code="43" name="Net-(R116-Pad1)">
+      <node ref="R116" pin="1"/>
+      <node ref="SW102" pin="3"/>
+      <node ref="R118" pin="2"/>
     </net>
-    <net code="44" name="Net-(R14-Pad2)">
-      <node ref="SW3" pin="4"/>
-      <node ref="R15" pin="1"/>
-      <node ref="R14" pin="2"/>
+    <net code="44" name="Net-(R111-Pad1)">
+      <node ref="R113" pin="2"/>
+      <node ref="R111" pin="1"/>
+      <node ref="SW102" pin="5"/>
     </net>
-    <net code="45" name="Net-(J19-PadT)">
-      <node ref="J19" pin="T"/>
-      <node ref="RV2" pin="3"/>
+    <net code="45" name="Net-(J119-PadT)">
+      <node ref="J119" pin="T"/>
+      <node ref="SW106" pin="1"/>
     </net>
-    <net code="46" name="Net-(J19-PadTN)">
-      <node ref="J19" pin="TN"/>
-      <node ref="R38" pin="2"/>
+    <net code="46" name="Net-(J118-PadT)">
+      <node ref="RV102" pin="3"/>
+      <node ref="J118" pin="T"/>
     </net>
-    <net code="47" name="Net-(J21-PadT)">
-      <node ref="SW6" pin="1"/>
-      <node ref="J21" pin="T"/>
+    <net code="47" name="Net-(J118-PadTN)">
+      <node ref="J118" pin="TN"/>
+      <node ref="R121" pin="2"/>
     </net>
-    <net code="48" name="Net-(J21-PadTN)">
-      <node ref="J21" pin="TN"/>
-      <node ref="R39" pin="2"/>
+    <net code="48" name="Net-(J119-PadTN)">
+      <node ref="J119" pin="TN"/>
+      <node ref="R122" pin="2"/>
     </net>
-    <net code="49" name="Net-(R35-Pad2)">
-      <node ref="SW5" pin="5"/>
-      <node ref="R35" pin="2"/>
-      <node ref="R36" pin="1"/>
+    <net code="49" name="Net-(R133-Pad1)">
+      <node ref="R133" pin="1"/>
+      <node ref="SW105" pin="4"/>
+      <node ref="R136" pin="2"/>
     </net>
-    <net code="50" name="Net-(R34-Pad2)">
-      <node ref="R35" pin="1"/>
-      <node ref="SW5" pin="4"/>
-      <node ref="R34" pin="2"/>
+    <net code="50" name="Net-(R136-Pad1)">
+      <node ref="R138" pin="2"/>
+      <node ref="R136" pin="1"/>
+      <node ref="SW105" pin="3"/>
     </net>
-    <net code="51" name="Net-(R33-Pad2)">
-      <node ref="R33" pin="2"/>
-      <node ref="R34" pin="1"/>
-      <node ref="SW5" pin="3"/>
+    <net code="51" name="Net-(R138-Pad1)">
+      <node ref="SW105" pin="2"/>
+      <node ref="R138" pin="1"/>
+      <node ref="R140" pin="2"/>
     </net>
-    <net code="52" name="Net-(R32-Pad2)">
-      <node ref="SW5" pin="2"/>
-      <node ref="R32" pin="2"/>
-      <node ref="R33" pin="1"/>
+    <net code="52" name="Net-(SW105-Pad7)">
+      <node ref="SW105" pin="7"/>
     </net>
-    <net code="53" name="Net-(J20-PadTN)">
-      <node ref="J20" pin="TN"/>
+    <net code="53" name="Net-(SW105-Pad8)">
+      <node ref="SW105" pin="8"/>
     </net>
-    <net code="54" name="Net-(SW5-Pad7)">
-      <node ref="SW5" pin="7"/>
+    <net code="54" name="Net-(SW105-Pad9)">
+      <node ref="SW105" pin="9"/>
     </net>
-    <net code="55" name="Net-(SW5-Pad8)">
-      <node ref="SW5" pin="8"/>
+    <net code="55" name="Net-(SW105-Pad10)">
+      <node ref="SW105" pin="10"/>
     </net>
-    <net code="56" name="Net-(SW5-Pad9)">
-      <node ref="SW5" pin="9"/>
+    <net code="56" name="Net-(SW105-Pad11)">
+      <node ref="SW105" pin="11"/>
     </net>
-    <net code="57" name="Net-(SW5-Pad10)">
-      <node ref="SW5" pin="10"/>
+    <net code="57" name="Net-(SW105-Pad12)">
+      <node ref="SW105" pin="12"/>
     </net>
-    <net code="58" name="Net-(SW5-Pad11)">
-      <node ref="SW5" pin="11"/>
+    <net code="58" name="Net-(J120-PadTN)">
+      <node ref="R134" pin="2"/>
+      <node ref="J120" pin="TN"/>
     </net>
-    <net code="59" name="Net-(SW5-Pad12)">
-      <node ref="SW5" pin="12"/>
+    <net code="59" name="Net-(J121-PadTN)">
+      <node ref="J121" pin="TN"/>
     </net>
-    <net code="60" name="Net-(J18-PadTN)">
-      <node ref="R37" pin="2"/>
-      <node ref="J18" pin="TN"/>
+    <net code="60" name="Net-(R128-Pad1)">
+      <node ref="R129" pin="2"/>
+      <node ref="SW104" pin="7"/>
+      <node ref="R128" pin="1"/>
     </net>
-    <net code="61" name="Net-(R26-Pad2)">
-      <node ref="R26" pin="2"/>
-      <node ref="R27" pin="1"/>
-      <node ref="SW4" pin="7"/>
+    <net code="61" name="Net-(R127-Pad1)">
+      <node ref="SW104" pin="8"/>
+      <node ref="R128" pin="2"/>
+      <node ref="R127" pin="1"/>
     </net>
-    <net code="62" name="Net-(R27-Pad2)">
-      <node ref="R27" pin="2"/>
-      <node ref="SW4" pin="8"/>
-      <node ref="R28" pin="1"/>
+    <net code="62" name="Net-(R126-Pad1)">
+      <node ref="SW104" pin="9"/>
+      <node ref="R126" pin="1"/>
+      <node ref="R127" pin="2"/>
     </net>
-    <net code="63" name="Net-(R28-Pad2)">
-      <node ref="R29" pin="1"/>
-      <node ref="SW4" pin="9"/>
-      <node ref="R28" pin="2"/>
+    <net code="63" name="Net-(R130-Pad1)">
+      <node ref="R132" pin="2"/>
+      <node ref="R130" pin="1"/>
+      <node ref="SW104" pin="5"/>
     </net>
-    <net code="64" name="Net-(R23-Pad2)">
-      <node ref="R23" pin="2"/>
-      <node ref="SW4" pin="4"/>
-      <node ref="R24" pin="1"/>
+    <net code="64" name="Net-(R132-Pad1)">
+      <node ref="R135" pin="2"/>
+      <node ref="R132" pin="1"/>
+      <node ref="SW104" pin="4"/>
     </net>
-    <net code="65" name="Net-(R22-Pad2)">
-      <node ref="R22" pin="2"/>
-      <node ref="R23" pin="1"/>
-      <node ref="SW4" pin="3"/>
+    <net code="65" name="Net-(R124-Pad1)">
+      <node ref="SW104" pin="10"/>
+      <node ref="R126" pin="2"/>
+      <node ref="R124" pin="1"/>
     </net>
-    <net code="66" name="Net-(R24-Pad2)">
-      <node ref="R24" pin="2"/>
-      <node ref="SW4" pin="5"/>
-      <node ref="R25" pin="1"/>
+    <net code="66" name="Net-(R129-Pad1)">
+      <node ref="R129" pin="1"/>
+      <node ref="R130" pin="2"/>
+      <node ref="SW104" pin="6"/>
     </net>
-    <net code="67" name="Net-(R25-Pad2)">
-      <node ref="R25" pin="2"/>
-      <node ref="SW4" pin="6"/>
-      <node ref="R26" pin="1"/>
+    <net code="67" name="Net-(R137-Pad1)">
+      <node ref="R137" pin="1"/>
+      <node ref="SW104" pin="2"/>
+      <node ref="R139" pin="2"/>
     </net>
-    <net code="68" name="Net-(R21-Pad2)">
-      <node ref="R21" pin="2"/>
-      <node ref="SW4" pin="2"/>
-      <node ref="R22" pin="1"/>
+    <net code="68" name="Net-(R135-Pad1)">
+      <node ref="R137" pin="2"/>
+      <node ref="SW104" pin="3"/>
+      <node ref="R135" pin="1"/>
     </net>
-    <net code="69" name="Net-(R29-Pad2)">
-      <node ref="R30" pin="1"/>
-      <node ref="R29" pin="2"/>
-      <node ref="SW4" pin="10"/>
+    <net code="69" name="Net-(R131-Pad1)">
+      <node ref="R131" pin="1"/>
+      <node ref="R133" pin="2"/>
+      <node ref="SW105" pin="5"/>
     </net>
-    <net code="70" name="Net-(R30-Pad2)">
-      <node ref="R30" pin="2"/>
-      <node ref="R31" pin="1"/>
-      <node ref="SW4" pin="11"/>
+    <net code="70" name="Net-(R123-Pad1)">
+      <node ref="R124" pin="2"/>
+      <node ref="R123" pin="1"/>
+      <node ref="SW104" pin="11"/>
     </net>
   </nets>
 </export>
