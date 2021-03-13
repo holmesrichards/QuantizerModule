@@ -26,8 +26,8 @@ Mount panel components to the panel, then wire (referring to [panel components s
 * Quantize tip to bottom terminals of toggle switches. Connect sleeves to ground. 
 * Trigger tips and sleeves to Molex connectors to Gate In A and B.
 * CV Out tips to Molex connectors to CV Out A and B.
-* 10k resistors to CV2, Quantize, and Trigger tip normal pins. Other ends of resistors to VCC pin on 8 pin Molex connector.
-* 100k resistors to toggle middle terminals. Other end of resistor to 2-pin Molex ground side. Middle terminal to 2-pin Molex other side. 2-pin Molex to Gate In C and D. Toggle top terminals are not connected.
+* 10k resistor from tip normal pin to VCC on each of the CV2, Quantize, and Trigger jacks. VCC is on pin 8 of 8 pin Molex connector.
+* 100k resistor on middle terminal of each toggle. Other end of resistor to 2-pin Molex ground side. Middle terminal to 2-pin Molex other side. 2-pin Molex to Gate In C and D. Toggle top terminals are not connected.
 * Attenuator pins 1 and 2 to a 2-pin Molex connector (pin 1 is ground) to CV In B and D.
 * On Scale rotary switches, add 11 1k resistors between pins 1–2, 2–3, 3–4, … 11–12. Wire center pin to 8 pin Molex as shown in circuit diagram. Connect pin 1 to ground and pin 12 to VCC from 8 pin Molex. 
 * On Bank rotary switches, add 5 1k resistors between pins 1–2, 2–3, 3–4, 4–5, 5–6. Wire center pin to 8 pin Molex as shown in circuit diagram. Connect pin 1 to ground and 6 to VCC from 8 pin Molex. 
